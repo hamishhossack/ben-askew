@@ -7,7 +7,7 @@ This is a simple project that combines features including:
 - [next omptimized images](https://github.com/cyrilwanner/next-optimized-images) to automatically optimizes images.
 
 ## Instant deploy
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daytimestudio/nextjs-netlifycms-typescript&stack=cms)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hamishhossack/ben-askew&stack=cms)
 
 
 ## Getting started

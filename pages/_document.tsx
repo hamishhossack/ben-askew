@@ -20,8 +20,8 @@ class MyDocument extends Document {
           <meta property="og:url" content={metadata.base_url} />
 
           {/* Replace with your own */}
-          <meta name="author" content="daytime.studio" />
-          <meta name="copyright" content="daytime.studio" />
+          <meta name="author" content="hamish.hossack" />
+          <meta name="copyright" content="hamish.hossack" />
 
           {/* Google Analytics goes here */}
         </Head>
