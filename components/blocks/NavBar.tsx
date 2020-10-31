@@ -1,4 +1,3 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { Router, withRouter } from 'next/router'
@@ -6,14 +5,8 @@ import React from 'react'
 import { PATHS } from '../../utils/navigation'
 
 type Props = {
-  router: Router;
-  transparent: boolean;
-}
-
-type Path = {
-  title: string;
-  path: string;
-  icon: IconProp;
+  router: Router
+  transparent: boolean
 }
 
 function Navbar({ router, transparent }: Props) {
@@ -28,11 +21,15 @@ function Navbar({ router, transparent }: Props) {
       >
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <Link href='/'>
-              <a className={
-                (transparent ? 'text-white' : 'text-gray-800') +
-                ' text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase'
-              }>Ben the Builder</a>
+            <Link href="/">
+              <a
+                className={
+                  (transparent ? 'text-white' : 'text-gray-800') +
+                  ' text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase'
+                }
+              >
+                Ben the Builder
+              </a>
             </Link>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -50,16 +47,24 @@ function Navbar({ router, transparent }: Props) {
             id="example-navbar-warning"
           >
             <ul className="flex flex-col lg:flex-row list-none mr-auto">
-              {PATHS.map(({title, path, icon}, k) => (
+              {PATHS.map(({ title, path, icon }, k) => (
                 <li key={k} className="flex items-center">
                   <Link href={path}>
-                    <a className={`px-3 py-4 lg:py-2 flex items-center text-xs uppercase ${transparent
+                    <a
+                      className={`px-3 py-4 lg:py-2 flex items-center text-xs uppercase ${
+                        transparent
                           ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
-                          : 'text-gray-800 hover:text-gray-600'} ${router.pathname === path ? 'font-bold' : ''}`}>
-                    {icon && <FontAwesomeIcon
-                      icon={icon}
-                      className={`mr-2 ${transparent ? 'lg:text-gray-300 text-gray-500' : 'text-gray-500'}`}
-                    />}{title}</a>
+                          : 'text-gray-800 hover:text-gray-600'
+                      } ${router.pathname === path ? 'font-bold' : ''}`}
+                    >
+                      {icon && (
+                        <FontAwesomeIcon
+                          icon={icon}
+                          className={`mr-2 ${transparent ? 'lg:text-gray-300 text-gray-500' : 'text-gray-500'}`}
+                        />
+                      )}
+                      {title}
+                    </a>
                   </Link>
                 </li>
               ))}
@@ -105,8 +110,7 @@ function Navbar({ router, transparent }: Props) {
                   type="button"
                   style={{ transition: 'all .15s ease' }}
                 >
-                  <FontAwesomeIcon icon={['fas', 'arrow-alt-circle-down']} />
-                  {' '}Enquire
+                  <FontAwesomeIcon icon={['fas', 'arrow-alt-circle-down']} /> Enquire
                 </button>
               </li>
             </ul>
