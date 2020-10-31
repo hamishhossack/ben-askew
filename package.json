@@ -9,12 +9,11 @@
     "type-check": "tsc",
     "export": "next build && next export",
     "lint": "eslint --ext .ts,.tsx",
-    "prettier": "prettier --write \"(pages|components)/**/*.{js,jsx,ts,tsx}\"",
     "local-backend": "npx netlify-cms-proxy-server"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint"
+      "pre-commit": "pretty-quick --staged --pattern '**/*.*(js|jsx|ts|tsx)' && npm run lint"
     }
   },
   "dependencies": {
