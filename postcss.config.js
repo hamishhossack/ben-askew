@@ -14,13 +14,13 @@ module.exports = {
         },
       },
     ],
-    process.env.NODE_ENV !== 'development'
-      ? [
-          '@fullhuman/postcss-purgecss',
-          {
-            content: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
-          },
-        ]
-      : undefined,
+    // process.env.NODE_ENV !== 'development'
+    //   ? [
+    //       '@fullhuman/postcss-purgecss',
+    //       {
+    //         content: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+    //       },
+    //     ]
+    //   : undefined,
   ].filter((x) => !!x),
 }
