@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
 import { withRouter, NextRouter } from 'next/router'
 import Footer from '../blocks/Footer'
@@ -12,7 +11,7 @@ type Props = {
   router: NextRouter
 }
 
-const Layout = ({ router, children, title = 'This is the default title' }: Props) => (
+const Layout = ({ title = 'This is the default title' }: Props) => (
   <div className="relative min-h-screen">
     <Head>
       <title>{title}</title>
@@ -133,10 +132,7 @@ const Layout = ({ router, children, title = 'This is the default title' }: Props
                 The kit comes with three pre-built pages to help you get started faster. You can change the text and
                 images and you're good to go. Just make sure you enable them first via JavaScript.
               </p>
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-                className="font-bold text-gray-800 mt-8"
-              >
+              <a href="#" className="font-bold text-gray-800 mt-8">
                 Check Tailwind Starter Kit!
               </a>
             </div>
@@ -504,8 +500,8 @@ const Layout = ({ router, children, title = 'This is the default title' }: Props
                       Message
                     </label>
                     <textarea
-                      rows="4"
-                      cols="80"
+                      rows={4}
+                      cols={80}
                       className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                       placeholder="Type a message..."
                     />
