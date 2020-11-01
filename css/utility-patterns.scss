@@ -16,7 +16,21 @@
 }
 
 .highlight {
-  background: linear-gradient(180deg,rgba(255,255,255,0) 70%, #63b3ed 50%);
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    background: #63b3ed;
+    opacity: 0.7;
+    position: absolute;
+    z-index: -1;
+    top: 68%;
+    left: 2%;
+    height: 0.8rem;
+    width: 100%;
+    border-radius: 1px;
+  }
 }
 
 @screen md {

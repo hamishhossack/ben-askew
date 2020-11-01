@@ -8,5 +8,6 @@ type Path = {
 
 export const PATHS: Path[] = [
   { title: 'About', path: '/about' },
-  { title: 'Contact', path: '/contact', icon: ['fas', 'phone'] },
+  { title: 'Portfolio', path: '/portfolio' },
+  { title: 'Contact', path: '/contact' },
 ]

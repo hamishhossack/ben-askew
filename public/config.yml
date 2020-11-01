@@ -9,7 +9,67 @@ collections:
   - name: "pages"
     label: "Pages"
     description: "You can edit the pages of your website here"
-    files: 
+    files:
+      - label: 'Home'
+        name: 'home'
+        file: data/pages/home.json
+        delete: false
+        fields:
+          - {label: 'Title', name: 'title', widget: 'string' }
+          - {label: 'Title Underlined', name: 'underlinedTitle', widget: 'string'}
+          - {label: 'Slogan', name: 'slogan', widget: 'string' }
+          - label: 'Cover Image'
+            name: 'image'
+            widget: 'image'
+            required: true
+            tagname: ''
+          - label: 'Service Block'
+            name: 'serviceBlock'
+            widget: 'object'
+            fields:
+              - label: "Services"
+                name: "services"
+                minimize_collapsed: true
+                widget: "list"
+                fields:
+                  - {label: "Color", name: "color", widget: "string"}
+                  - {label: "Icon", name: "icon", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - {label: "Animation", name: "animation", widget: "select", default: "fade-up", options: ["fade-up", "fade-down", "fade-left", "fade-right", "fade-up-right", "fade-up-left", "zoom-in", "zoom-in-left", "zoom-in-right"]}
+              - label: 'Featured'
+                name: 'featured'
+                widget: 'object'
+                fields:
+                  - {label: 'Title', name: 'title', widget: 'string'}
+                  - {label: 'Description', name: 'description', widget: 'string'}
+                  - {label: 'Image', name: 'image', widget: 'image'}
+              - label: 'Content'
+                name: 'content'
+                widget: 'markdown'
+          - label: 'Build Block'
+            name: 'buildBlock'
+            widget: 'object'
+            fields:
+              - {label: 'Title', name: 'title', widget: string}
+              - {label: 'Description', name: 'description', widget: string}
+              - label: "Items"
+                name: "items"
+                minimize_collapsed: true
+                widget: "list"
+                fields:
+                  - {label: "Icon", name: "icon", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - {label: "Animation", name: "animation", widget: "select", default: "fade-up", options: ["fade-up", "fade-down", "fade-left", "fade-right", "fade-up-right", "fade-up-left", "zoom-in", "zoom-in-left", "zoom-in-right"]}
+              - label: 'Featured'
+                name: 'featured'
+                widget: 'object'
+                fields:
+                  - {label: 'Title', name: 'title', widget: 'string'}
+                  - {label: 'Description', name: 'description', widget: 'string'}
+                  - {label: 'Image', name: 'image', widget: 'image'}
+
       - label: 'About'
         name: 'about'
         file: data/pages/about.json
@@ -17,6 +77,20 @@ collections:
         fields:
           - { label: 'Content', name: 'content', widget: 'markdown' }
           - { label: "Image", name: "thumbnail", widget: "image" }
+
+      - label: 'Portfolio' # Used in the UI
+        name: 'portfolio'
+        file: 'data/pages/portfolio.json'
+        fields:
+          - {label: 'Title', name: 'title', widget: 'string' }
+          - {label: 'Title Underlined', name: 'underlinedTitle', widget: 'string'}
+          - {label: 'Slogan', name: 'slogan', widget: 'string', required: false }
+          - label: 'Cover Image'
+            name: 'image'
+            widget: 'image'
+            required: true
+            tagname: ''
+
       - label: 'Contact'
         name: 'contact'
         file: data/pages/contact.json
@@ -24,7 +98,30 @@ collections:
         fields:
           - { label: 'Content', name: 'content', widget: 'markdown' }
           - { label: "Image", name: "thumbnail", widget: "image" }
-              
+
+  - label: 'Jobs' # Used in the UI
+    name: 'jobs'
+    label_singular: 'Job' # Used in the UI, ie: "New Post"
+    title: "Works we've are proud of"
+    description: >
+      The description is a great place for tone setting, high level information, and editing
+      guidelines that are specific to a collection.
+    folder: '_jobs'
+    slug: '{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    view_filters:
+      - label: Jobs With Index
+        field: title
+        pattern: 'This is a job #'
+      - label: Drafts
+        field: draft
+        pattern: true
+    fields: # The fields each document in this collection have
+      - { label: 'Title', name: 'title', widget: 'string', hint: 'Job Name' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Cover Image', name: 'image', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+
   - name: "settings"
     label: "Settings"
     delete: false

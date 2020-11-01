@@ -1,5 +1,40 @@
 {
-  "title": "Bens website",
+  "title": "Your Leaks",
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
-  "thumbnail": "media/hero-image.jpg"
+  "thumbnail": "media/hero-image.jpg",
+  "serviceBlock": {
+    "icon": "user-friends",
+    "services": [
+      {
+        "animation": "fade-up-left",
+        "color": "red",
+        "icon": "award",
+        "title": "Awarded Electrician",
+        "description": "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough."
+      },
+      {
+        "animation": "fade-down",
+        "color": "blue",
+        "icon": "retweet",
+        "title": "Free Water",
+        "description": "Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious."
+      },
+      {
+        "animation": "fade-up-right",
+        "color": "green",
+        "icon": "fingerprint",
+        "description": "Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged",
+        "title": "Verified Company"
+      }
+    ],
+    "featured": {
+      "title": "Top Notch Services",
+      "description": "The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens.",
+      "image": "media/laptops.jpeg"
+    },
+    "content": "### Working with us is a pleasure\n\nDon't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.\n\nThe kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. Just make sure you enable them first via JavaScript.\n\n[Check Tailwind Starter Kit!](http://localhost:3000/#)"
+  },
+  "slogan": "This is a simple example of a Landing Page Ben",
+  "image": "media/builder.jpeg",
+  "underlinedTitle": "start with us"
 }
