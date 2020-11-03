@@ -30,14 +30,12 @@ const Job = ({ job }: Props) => {
     )
   }
 
-  console.log('content', job.content)
-
   return (
     <Layout>
       <div className="flex flex-col min-h-screen overflow-hidden">
         {/*  Page content */}
         <main className="flex-grow">
-          <Hero title={job.data.title} image={job.data.image} nextBg="text-white" />
+          <Hero title={job.data.title} image={job.data.image} nextBg="white" />
 
           <section className="pb-20 bg-white-300 pt-20">
             <div className="container mx-auto px-4">

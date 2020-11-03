@@ -28,7 +28,7 @@ const PortfolioPage = ({ jobs }: Props) => (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Page content */}
       <main className="flex-grow">
-        <Hero title={data.title} underlinedTitle={data.underlinedTitle} image={data.image} nextBg="text-white" />
+        <Hero title={data.title} underlinedTitle={data.underlinedTitle} image={data.image} nextBg="white" />
         {jobs.map((job) => (
           <FeaturedBlock key={job.data.title} {...job.data} />
         ))}
