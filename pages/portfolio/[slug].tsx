@@ -1,9 +1,11 @@
 import fs from 'fs'
 import path from 'path'
-import ReactMarkdown from 'react-markdown'
-import * as matter from 'gray-matter'
+import Head from 'next/head'
+import DefaultErrorPage from 'next/error'
+import matter from 'gray-matter'
 import Hero from '../../components/blocks/Hero'
 import Layout from '../../components/utils/Layout'
+import ReactMarkdown from '../../components/utils/ReactMarkdown'
 
 type Props = {
   slug: string
@@ -15,7 +17,21 @@ type Props = {
   }
 }
 
-const Job = ({ slug, job }: Props) => {
+const Job = ({ job }: Props) => {
+  // Hide the content if it's a draft
+  if (job.data.draft) {
+    return (
+      <>
+        <Head>
+          <meta name="robots" content="noindex" />
+        </Head>
+        <DefaultErrorPage statusCode={404} />
+      </>
+    )
+  }
+
+  console.log('content', job.content)
+
   return (
     <Layout>
       <div className="flex flex-col min-h-screen overflow-hidden">
@@ -68,7 +84,8 @@ type StaticProps = {
 }
 
 export const getStaticProps = async ({ params: { slug } }: StaticParams): Promise<StaticProps> => {
-  const { content, data } = matter.read(path.join('_jobs', `${slug}.md`))
+  const file = fs.readFileSync(path.join('_jobs', `${slug}.md`))
+  const { content, data } = matter(file)
   return {
     props: {
       slug,

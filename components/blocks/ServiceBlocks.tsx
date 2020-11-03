@@ -1,6 +1,6 @@
 import { IconName } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from '../utils/ReactMarkdown'
 
 export type ServiceContent = {
   icon: string
@@ -53,18 +53,6 @@ function ServiceBlocks({ services, icon, featured, content }: Props) {
               <FontAwesomeIcon icon={['fas', icon as IconName]} className="text-xl" />
             </div>
             <ReactMarkdown>{content}</ReactMarkdown>
-            <h3 className="text-3xl mb-2 font-semibold leading-normal">Working with us is a pleasure</h3>
-            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-              Don't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them
-              first via JavaScript.
-            </p>
-            <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-              The kit comes with three pre-built pages to help you get started faster. You can change the text and
-              images and you're good to go. Just make sure you enable them first via JavaScript.
-            </p>
-            <a href="#" className="font-bold text-gray-800 mt-8">
-              Check Tailwind Starter Kit!
-            </a>
           </div>
 
           <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">

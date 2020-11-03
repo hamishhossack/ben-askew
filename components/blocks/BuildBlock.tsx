@@ -1,33 +1,20 @@
 import { IconName } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-type BlockBlockContent = {
-  icon: IconName
+type BuildBlockContent = {
+  icon: string
   title: string
   description: string
 }
 
-function BuildBlock() {
-  const title = 'Build Something'
-  const description =
-    'Put the potentially record low maximum sea ice extent tihs year down to low ice. According to the National Oceanic and Atmospheric Administration, Ted, Scambos.'
-  const buildBlocks: BlockBlockContent[] = [
-    {
-      icon: 'medal',
-      title: 'Excelent Services',
-      description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    },
-    {
-      icon: 'poll',
-      title: 'Grow your market',
-      description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    },
-    {
-      icon: 'lightbulb',
-      title: 'Launch time',
-      description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    },
-  ]
+type Props = {
+  title: string
+  description: string
+  withBP?: boolean
+  items: BuildBlockContent[]
+}
+
+function BuildBlock({ title, description, items, withBP = true }: Props) {
   return (
     <section className="pb-20 relative block bg-gray-900">
       <div
@@ -47,7 +34,7 @@ function BuildBlock() {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
+      <div className={`container mx-auto px-4 lg:pt-24 ${withBP ? 'lg:pb-64' : ''}`}>
         <div data-aos="zoom-in" className="flex flex-wrap text-center justify-center">
           <div className="w-full lg:w-6/12 px-4">
             <h2 className="text-4xl font-semibold text-white">{title}</h2>
@@ -55,10 +42,10 @@ function BuildBlock() {
           </div>
         </div>
         <div className="flex flex-wrap mt-12 justify-center">
-          {buildBlocks.map(({ icon, title, description }) => (
+          {items.map(({ icon, title, description }) => (
             <div key={title} data-aos="fade-up" className="w-full lg:w-3/12 px-4 text-center">
               <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                <FontAwesomeIcon icon={['fas', icon]} className="text-xl" />
+                <FontAwesomeIcon icon={['fas', icon as IconName]} className="text-xl" />
               </div>
               <h6 className="text-xl mt-5 font-semibold text-white">{title}</h6>
               <p className="mt-2 mb-4 text-gray-500">{description}</p>

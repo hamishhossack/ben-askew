@@ -1,16 +1,26 @@
 import fs from 'fs'
-import matter from 'gray-matter'
 import path from 'path'
+import matter from 'gray-matter'
 import FeaturedBlock from '../../components/blocks/FeaturedBlock'
 import Hero from '../../components/blocks/Hero'
 import Layout from '../../components/utils/Layout'
 import data from '../../data/pages/portfolio.json'
 
-type Props = {
-  jobs: {
+type Job = {
+  content: string
+  data: {
+    title: string
+    titleUnderlined: string
+    image: string
+    imageAlt: string
+    href: string
+    description: string
     content: string
-    data: { [key: string]: string }
-  }[]
+  }
+}
+
+type Props = {
+  jobs: Job[]
 }
 
 const PortfolioPage = ({ jobs }: Props) => (
@@ -20,7 +30,7 @@ const PortfolioPage = ({ jobs }: Props) => (
       <main className="flex-grow">
         <Hero title={data.title} underlinedTitle={data.underlinedTitle} image={data.image} nextBg="text-white" />
         {jobs.map((job) => (
-          <FeaturedBlock key={job.data.title} />
+          <FeaturedBlock key={job.data.title} {...job.data} />
         ))}
       </main>
     </div>
@@ -32,11 +42,13 @@ type StaticProps = {
 }
 
 export const getStaticProps = async (): Promise<StaticProps> => {
-  const paths = fs.readdirSync(path.join('./_jobs'))
-  const jobs = paths.map((p) => {
-    const { content, data } = matter.read(path.join('_jobs', p))
-    return { content, data }
-  })
+  const files = fs.readdirSync(path.join('./_jobs'))
+  const jobs = files.map((f) => {
+    const file = fs.readFileSync(path.join('./_jobs', f)).toString()
+    const { data, content } = matter(file)
+    return { data: { ...data, href: `/portfolio/${f.replace('.md', '')}` }, content }
+  }) as Job[]
+
   return {
     props: {
       jobs,

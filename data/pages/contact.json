@@ -1,5 +1,29 @@
 {
   "title": "Contact",
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
-  "thumbnail": "media/hero-image.jpg"
+  "thumbnail": "media/hero-image.jpg",
+  "contact": {
+    "title": "Contact Us by",
+    "description": "Put the potentially record low maximum sea ice extent tihs year down to low ice. According to the National Oceanic and Atmospheric Administration, Ted, Scambos.",
+    "items": [
+      {
+        "animation": "fade-up-left",
+        "title": "Phone",
+        "icon": "phone",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+      },
+      {
+        "animation": "fade-up",
+        "icon": "envelope",
+        "title": "Email",
+        "description": "ben@bwaservices.co.uk"
+      },
+      {
+        "animation": "fade-up-right",
+        "icon": "user-circle",
+        "title": "Social Media",
+        "description": "Facebook, Instagram, Google"
+      }
+    ]
+  }
 }

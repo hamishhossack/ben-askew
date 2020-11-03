@@ -36,5 +36,29 @@
   },
   "slogan": "This is a simple example of a Landing Page Ben",
   "image": "media/builder.jpeg",
-  "underlinedTitle": "start with us"
+  "underlinedTitle": "start with us",
+  "buildBlock": {
+    "title": "Build Something",
+    "description": "Put the potentially record low maximum sea ice extent tihs year down to low ice. According to the National Oceanic and Atmospheric Administration, Ted, Scambos.",
+    "items": [
+      {
+        "animation": "fade-up-left",
+        "title": "Excelent Services",
+        "icon": "medal",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+      },
+      {
+        "animation": "fade-up",
+        "icon": "poll",
+        "title": "Grow your market",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+      },
+      {
+        "animation": "fade-up-right",
+        "icon": "lightbulb",
+        "title": "Launch time",
+        "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+      }
+    ]
+  }
 }

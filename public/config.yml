@@ -47,6 +47,7 @@ collections:
               - label: 'Content'
                 name: 'content'
                 widget: 'markdown'
+
           - label: 'Build Block'
             name: 'buildBlock'
             widget: 'object'
@@ -62,21 +63,28 @@ collections:
                   - {label: "Title", name: "title", widget: "string"}
                   - {label: "Description", name: "description", widget: "string"}
                   - {label: "Animation", name: "animation", widget: "select", default: "fade-up", options: ["fade-up", "fade-down", "fade-left", "fade-right", "fade-up-right", "fade-up-left", "zoom-in", "zoom-in-left", "zoom-in-right"]}
-              - label: 'Featured'
-                name: 'featured'
-                widget: 'object'
-                fields:
-                  - {label: 'Title', name: 'title', widget: 'string'}
-                  - {label: 'Description', name: 'description', widget: 'string'}
-                  - {label: 'Image', name: 'image', widget: 'image'}
 
       - label: 'About'
         name: 'about'
         file: data/pages/about.json
         delete: false
         fields:
-          - { label: 'Content', name: 'content', widget: 'markdown' }
-          - { label: "Image", name: "thumbnail", widget: "image" }
+          - label: 'Key Points'
+            name: 'keyPoints'
+            widget: 'object'
+            fields:
+              - {label: 'Title', name: 'title', widget: string}
+              - {label: 'Description', name: 'description', widget: string}
+              - label: "Items"
+                name: "items"
+                minimize_collapsed: true
+                widget: "list"
+                fields:
+                  - {label: "Icon", name: "icon", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - {label: "Animation", name: "animation", widget: "select", default: "fade-up", options: ["fade-up", "fade-down", "fade-left", "fade-right", "fade-up-right", "fade-up-left", "zoom-in", "zoom-in-left", "zoom-in-right"]}
+          - { label: 'Extra', name: "extra", widget: "markdown" }
 
       - label: 'Portfolio' # Used in the UI
         name: 'portfolio'
@@ -98,6 +106,21 @@ collections:
         fields:
           - { label: 'Content', name: 'content', widget: 'markdown' }
           - { label: "Image", name: "thumbnail", widget: "image" }
+          - label: 'Contact Details'
+            name: 'contact'
+            widget: 'object'
+            fields:
+              - {label: 'Title', name: 'title', widget: string}
+              - {label: 'Description', name: 'description', widget: string}
+              - label: "Items"
+                name: "items"
+                minimize_collapsed: true
+                widget: "list"
+                fields:
+                  - {label: "Icon", name: "icon", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - {label: "Animation", name: "animation", widget: "select", default: "fade-up", options: ["fade-up", "fade-down", "fade-left", "fade-right", "fade-up-right", "fade-up-left", "zoom-in", "zoom-in-left", "zoom-in-right"]}
 
   - label: 'Jobs' # Used in the UI
     name: 'jobs'
@@ -118,8 +141,11 @@ collections:
         pattern: true
     fields: # The fields each document in this collection have
       - { label: 'Title', name: 'title', widget: 'string', hint: 'Job Name' }
-      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
-      - { label: 'Cover Image', name: 'image', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'string', hint: 'Where the "slogan" sits' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true, hint: 'This hides the item from the website' }
+      - { label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'Appears on the homepage' }
+      - { label: 'Main Image', name: 'image', widget: 'image' }
+      - { label: 'Main Image Alt', name: 'imageAlt', widget: 'string', hint: 'Wanted for Accessibility' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
 
   - name: "settings"
