@@ -29,17 +29,17 @@
     ],
     "featured": {
       "title": "24 Hour Emergency call out 07415472578",
-      "description": "The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens.",
+      "description": "Loss of power? Water damage? Emergency works required? Call us - Same day response",
       "image": "media/capture-2.png"
     },
     "content": "### Working with us is a pleasure\n\nDon't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.\n\nThe kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. Just make sure you enable them first via JavaScript.\n\n[Check Tailwind Starter Kit!](http://localhost:3000/#)"
   },
-  "slogan": "All electrical needs, from socket installations to full rewires, fault finding and certification. Domestic & Commercial",
-  "image": "media/img_5326.jpg",
-  "underlinedTitle": "NICEIC Approved contractor covering Surrey, South East, Sussex and more",
+  "slogan": "Covering Surrey, South East, Sussex and more",
+  "image": "media/image0.jpeg",
+  "underlinedTitle": "NICEIC Approved contractor",
   "buildBlock": {
-    "title": "Build Something",
-    "description": "Put the potentially record low maximum sea ice extent tihs year down to low ice. According to the National Oceanic and Atmospheric Administration, Ted, Scambos.",
+    "title": "NIC EIC Approved Contractor ",
+    "description": "All electrical needs, from socket installations to full rewires, fault finding and certification. Domestic & Commercial",
     "items": [
       {
         "animation": "fade-up-left",
