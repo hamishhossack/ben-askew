@@ -1,5 +1,5 @@
 {
-  "title": "Local Electrician 24 Hour call out service ",
+  "title": "Local Electrician 24 Hour call out service",
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "thumbnail": "media/hero-image.jpg",
   "serviceBlock": {
@@ -34,7 +34,7 @@
     },
     "content": "### Working with us is a pleasure\n\nDon't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.\n\nThe kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. Just make sure you enable them first via JavaScript.\n\n[Check Tailwind Starter Kit!](http://localhost:3000/#)"
   },
-  "slogan": "Covering Surrey, South East, Sussex and more",
+  "slogan": "Covering South East, South West, Surrey, Sussex and more",
   "image": "media/image0.jpeg",
   "underlinedTitle": "NICEIC Approved contractor",
   "buildBlock": {
