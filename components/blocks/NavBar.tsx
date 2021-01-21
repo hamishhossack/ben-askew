@@ -28,7 +28,7 @@ function Navbar({ router, transparent }: Props) {
                   ' text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase'
                 }
               >
-                Ben the Builder
+                <img src={require('../../data/media/BWA.svg')} alt="BWA logo" className="h-24 max-w-full" />
               </a>
             </Link>
             <button

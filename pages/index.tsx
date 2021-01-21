@@ -40,7 +40,7 @@ const IndexPage = ({ featured }: Props) => {
               content={topFeature.content}
             />
           )}
-          <BuildBlock {...data.buildBlock} />
+          {/* <BuildBlock {...data.buildBlock} /> */}
           <ContactBlock />
         </main>
       </div>

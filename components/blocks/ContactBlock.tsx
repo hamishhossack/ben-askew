@@ -6,9 +6,9 @@ function ContactBlock() {
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
               <div className="flex-auto p-5 lg:p-10">
-                <h4 className="text-2xl font-semibold">Want to work with us?</h4>
+                <h4 className="text-2xl font-semibold">Contact us</h4>
                 <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                  Complete this form and we will get back to you in 24 hours.
+                  Complete this form and we will get back to you in 24 hours
                 </p>
                 <div className="relative w-full mb-3 mt-8">
                   <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="full-name">
