@@ -1,6 +1,6 @@
 function ContactBlock() {
   return (
-    <section className="relative block py-24 lg:pt-0 bg-gray-900">
+    <section className="relative block py-40 lg:pt-0 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div className="w-full lg:w-6/12 px-4">

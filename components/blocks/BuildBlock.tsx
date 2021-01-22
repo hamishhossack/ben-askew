@@ -11,13 +11,14 @@ type BuildBlockContent = {
 type Props = {
   title: string
   description: string
-  withBP?: boolean
   items: BuildBlockContent[]
+  withBP?: boolean
+  classNames?: string
 }
 
-function BuildBlock({ title, description, items, withBP = true }: Props) {
+function BuildBlock({ title, description, items, withBP = true, classNames = '' }: Props) {
   return (
-    <section className="pb-20 relative block bg-gray-900">
+    <section className={`pb-20 relative block bg-gray-900 ${classNames}`}>
       <SectionBreak color="gray-900" />
 
       <div className={`container mx-auto px-4 lg:pt-24 ${withBP ? 'lg:pb-64' : ''}`}>

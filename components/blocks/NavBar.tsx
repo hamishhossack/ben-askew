@@ -99,7 +99,7 @@ function Navbar({ router, transparent }: Props) {
                 </a>
               </li>
 
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <button
                   className={
                     (transparent
@@ -112,7 +112,7 @@ function Navbar({ router, transparent }: Props) {
                 >
                   <FontAwesomeIcon icon={['fas', 'arrow-alt-circle-down']} /> Enquire
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
