@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Router, withRouter } from 'next/router'
 import React from 'react'
 import { PATHS } from '../../utils/navigation'
+import metadata from '../../data/settings.json'
 
 type Props = {
   router: Router
@@ -78,21 +79,7 @@ function Navbar({ router, transparent }: Props) {
                       : 'text-gray-800 hover:text-gray-600') +
                     ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                   }
-                  href="https://facebook.com/ben.askew"
-                >
-                  <FontAwesomeIcon icon={['fab', 'google']} className="text-gray-500 text-lg leading-lg" />
-                  <span className="lg:hidden inline-block ml-2">Google</span>
-                </a>
-              </li>
-              <li className="flex items-center">
-                <a
-                  className={
-                    (transparent
-                      ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
-                      : 'text-gray-800 hover:text-gray-600') +
-                    ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  }
-                  href="https://facebook.com/ben.askew"
+                  href={`https://facebook.com/${metadata.facebook_account}`}
                 >
                   <FontAwesomeIcon icon={['fab', 'facebook']} className="text-gray-500 text-lg leading-lg" />
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
