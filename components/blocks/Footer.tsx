@@ -56,24 +56,22 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
+                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">Contact</span>
                   <ul className="list-unstyled">
                     <li>
-                      <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="/terms">
-                        Terms & Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm" href="/privacy">
-                        Privacy Policy
+                      <a
+                        className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                        href="tel:+447507862269"
+                      >
+                        +447507862269
                       </a>
                     </li>
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="/contact-us"
+                        href="email:info@bwaelectrical.com"
                       >
-                        Contact Us
+                        info@bwaelectrical.com
                       </a>
                     </li>
                   </ul>
@@ -88,11 +86,7 @@ export default function Footer() {
             </div>
             <div className="w-full md:w-4/12 px-4 text-right">
               <div className="text-sm text-gray-600 font-semibold py-1">
-                Copyright © {new Date().getFullYear()} Bens website by{' '}
-                <a href="https://www.hamishhossack.co.uk" className="text-gray-600 hover:text-gray-900">
-                  Hamish Hossack
-                </a>
-                .
+                Copyright &copy; {new Date().getFullYear()} BWA Electrical
               </div>
             </div>
           </div>
