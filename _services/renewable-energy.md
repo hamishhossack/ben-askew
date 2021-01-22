@@ -6,6 +6,7 @@ description: " Renewable energy and energy saving is an increasingly important
   panels, power walls and car charging points."
 draft: false
 featured: false
+imageRight: true
 image: media/istockphoto-656815242-1024x1024.jpg
 imageAlt: Image
 ---
