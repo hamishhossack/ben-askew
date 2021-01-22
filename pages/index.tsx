@@ -30,16 +30,6 @@ const IndexPage = ({ featured }: Props) => {
             content={data.serviceBlock.content}
             featured={data.serviceBlock.featured}
           />
-          {topFeature && (
-            <FeaturedBlock
-              href={topFeature.href}
-              title={topFeature.data.title}
-              description={topFeature.data.description}
-              image={topFeature.data.image}
-              imageAlt={topFeature.data.imageAlt}
-              content={topFeature.content}
-            />
-          )}
           <BuildBlock {...data.buildBlock} />
           <ContactBlock />
         </main>
