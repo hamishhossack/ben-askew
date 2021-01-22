@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import SectionBreak from '../elements/SectionBreak'
+import ReactMarkdown from '../utils/ReactMarkdown'
 
 type Props = {
   href: string
@@ -10,9 +11,10 @@ type Props = {
   image: string
   imageAlt: string
   imageRight: boolean
+  isMarkdown: boolean
 }
 
-function FeaturedBlock({ href, title, description, image, imageAlt, imageRight }: Props) {
+function FeaturedBlock({ href, title, description, image, imageAlt, imageRight, isMarkdown = false }: Props) {
   return (
     <section className="relative py-20">
       <SectionBreak />
@@ -30,7 +32,11 @@ function FeaturedBlock({ href, title, description, image, imageAlt, imageRight }
                 <FontAwesomeIcon icon={['fas', 'award']} className="text-xl" />
               </div>
               <h3 className="text-3xl font-semibold">{title}</h3>
-              <p className="mt-4 text-lg leading-relaxed text-gray-600">{description}</p>
+              {isMarkdown ? (
+                <ReactMarkdown>{description}</ReactMarkdown>
+              ) : (
+                <p className="mt-4 text-lg leading-relaxed text-gray-600">{description}</p>
+              )}
               <Link href={href}>
                 <a className="font-bold text-gray-800 mt-8">See the project in detail</a>
               </Link>
