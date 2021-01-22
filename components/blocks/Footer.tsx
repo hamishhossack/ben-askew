@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
 import { PATHS } from '../../utils/navigation'
+import metadata from '../../data/settings.json'
 
 export default function Footer() {
   return (
@@ -61,17 +62,17 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="tel:+447507862269"
+                        href={`tel:${metadata.telephone}`}
                       >
-                        +447507862269
+                        {metadata.telephone}
                       </a>
                     </li>
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="email:info@bwaelectrical.com"
+                        href={`email:${metadata.email}`}
                       >
-                        info@bwaelectrical.com
+                        {metadata.email}
                       </a>
                     </li>
                   </ul>
@@ -86,7 +87,7 @@ export default function Footer() {
             </div>
             <div className="w-full md:w-4/12 px-4 text-right">
               <div className="text-sm text-gray-600 font-semibold py-1">
-                Copyright &copy; {new Date().getFullYear()} BWA Electrical
+                Copyright &copy; {new Date().getFullYear()} BWA electrical
               </div>
             </div>
           </div>
