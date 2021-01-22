@@ -8,7 +8,7 @@ const ContactPage = () => (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Page content */}
       <main className="flex-grow">
-        <BuildBlock {...data.contact} />
+        <BuildBlock classNames="pt-24" {...data.contact} />
         <ContactBlock />
       </main>
     </div>
