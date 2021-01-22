@@ -9,7 +9,7 @@ const AboutPage = () => (
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Page content */}
       <main className="flex-grow">
-        <BuildBlock {...data.keyPoints} withBP={false} />
+        <BuildBlock {...data.keyPoints} withBP={false} classNames="pt-24" />
         <section className="relative py-20">
           <SectionBreak />
           <div className="container mx-auto px-4">

@@ -28,7 +28,7 @@ function Navbar({ router, transparent }: Props) {
                   ' text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase'
                 }
               >
-                Ben the Builder
+                <img src={require('../../data/media/BWA.svg')} alt="BWA logo" className="h-24 max-w-full" />
               </a>
             </Link>
             <button
@@ -99,7 +99,7 @@ function Navbar({ router, transparent }: Props) {
                 </a>
               </li>
 
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <button
                   className={
                     (transparent
@@ -112,7 +112,7 @@ function Navbar({ router, transparent }: Props) {
                 >
                   <FontAwesomeIcon icon={['fas', 'arrow-alt-circle-down']} /> Enquire
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
