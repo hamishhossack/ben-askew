@@ -43,7 +43,6 @@ function Block({ index = 0, title, animation, color, description, icon }: Servic
 }
 
 function ServiceBlocks({ services, icon, featured, content }: Props) {
-  console.log('services', services)
   return (
     <section className="pb-20 bg-gray-300 -mt-24">
       <div className="container mx-auto px-4">
