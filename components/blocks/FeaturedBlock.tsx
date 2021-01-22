@@ -28,9 +28,6 @@ function FeaturedBlock({ href, title, description, image, imageAlt, imageRight, 
           )}
           <div data-aos="zoom-in" className="w-full md:w-5/12 ml-auto mr-auto px-4">
             <div className="md:pr-12">
-              <div className="p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full text-green-600 bg-green-300">
-                <FontAwesomeIcon icon={['fas', 'award']} className="text-xl" />
-              </div>
               <h3 className="text-3xl font-semibold">{title}</h3>
               {isMarkdown ? (
                 <ReactMarkdown>{description}</ReactMarkdown>
