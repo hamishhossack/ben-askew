@@ -144,6 +144,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string', hint: 'Where the "slogan" sits' }
       - { label: 'Draft', name: 'draft', widget: 'boolean', default: true, hint: 'This hides the item from the website' }
       - { label: 'Featured', name: 'featured', widget: 'boolean', default: false, hint: 'Appears on the homepage' }
+      - { label: 'ImageRight', name: 'imageRight', widget: 'boolean', default: false, hint: 'Image on the right' }
       - { label: 'Main Image', name: 'image', widget: 'image' }
       - { label: 'Main Image Alt', name: 'imageAlt', widget: 'string', hint: 'Wanted for Accessibility' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }

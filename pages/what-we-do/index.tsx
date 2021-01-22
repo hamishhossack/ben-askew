@@ -13,6 +13,7 @@ type Job = {
     titleUnderlined: string
     image: string
     imageAlt: string
+    imageRight: boolean
     href: string
     description: string
     content: string
