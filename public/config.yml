@@ -166,6 +166,7 @@ collections:
           - { label: "Preview thumbnail", name: "thumbnail", widget: "image" }
           - { label: "Site keywords", name: "site_keywords", widget: "string", hint: 'Use a comma to separate keywords. E.g Photography, Portfolio, Prints'}
           - { label: "Telephone", name: "telephone", widget: "string" }
+          - { label: "Telephone Secondary", name: "telephone_secondary", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Twitter account", name: "twitter_account", widget: "string" }
           - { label: "Instagram account", name: "instagram_account", widget: "string" }
