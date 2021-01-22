@@ -3,22 +3,20 @@ import path from 'path'
 import matter from 'gray-matter'
 import BuildBlock from '../components/blocks/BuildBlock'
 import ContactBlock from '../components/blocks/ContactBlock'
-import FeaturedBlock from '../components/blocks/FeaturedBlock'
 import Hero from '../components/blocks/Hero'
 import ServiceBlocks from '../components/blocks/ServiceBlocks'
 import Layout from '../components/utils/Layout'
 import data from '../data/pages/home.json'
 
 type Props = {
-  featured: {
+  featured?: {
     content: string
     href: string
     data: { [key: string]: string }
   }[]
 }
 
-const IndexPage = ({ featured }: Props) => {
-  const [topFeature] = featured
+const IndexPage = () => {
   return (
     <Layout title="Home">
       <div className="flex flex-col min-h-screen overflow-hidden">
