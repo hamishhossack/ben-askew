@@ -53,12 +53,12 @@ type StaticProps = {
 }
 
 export const getStaticProps = async (): Promise<StaticProps> => {
-  const files = fs.readdirSync(path.join('./_jobs'))
+  const files = fs.readdirSync(path.join('./_services'))
   const featured = files
     .map((f) => {
-      const file = fs.readFileSync(path.join('./_jobs', f)).toString()
+      const file = fs.readFileSync(path.join('./_services', f)).toString()
       const { data, content } = matter(file)
-      return { data, content, href: `/portfolio/${f.replace('.md', '')}` }
+      return { data, content, href: `/what-we-do/${f.replace('.md', '')}` }
     })
     .filter((j) => j.data.featured)
 

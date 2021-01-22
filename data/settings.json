@@ -2,8 +2,11 @@
   "base_url": "ben-askew.netlify.com",
   "site_description": "A generic site description that will appear in search engine results.",
   "instagram_account": "@benaskew",
-  "site_keywords": "Plumber, Surrey, Leatherhead, London, Plumbing",
+  "facebook_account": "@benaskew",
+  "telephone": "",
+  "email": "info@bwaelectrical.com",
+  "site_keywords": "Electrician, Surrey, Leatherhead, London, Electrical",
   "site_title": "Ben Askew plumber",
-  "logo": "media/logo.jpg",
-  "thumbnail": "media/logo.png"
+  "logo": "media/logo.svg",
+  "thumbnail": "media/logo.svg"
 }

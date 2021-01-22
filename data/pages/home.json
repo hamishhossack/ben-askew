@@ -1,5 +1,5 @@
 {
-  "title": "Local Electrician 24 Hour call out",
+  "title": "Local Electrician 24 Hour call out NICEIC",
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "thumbnail": "media/hero-image.jpg",
   "serviceBlock": {
@@ -23,7 +23,7 @@
         "animation": "fade-up-right",
         "color": "green",
         "icon": "fingerprint",
-        "description": "Going green is a priority for everyone, We guarantee to help you at reasonable prices",
+        "description": "Going green is a priority for everyone, we guarantee to help you at reasonable prices",
         "title": "Renewable Energy"
       }
     ],
@@ -36,7 +36,7 @@
   },
   "slogan": "Covering South East, South West, Surrey, Sussex and more",
   "image": "media/image0.jpeg",
-  "underlinedTitle": "NICEIC Approved contractor",
+  "underlinedTitle": "Approved contractor",
   "buildBlock": {
     "title": "Contact us by email for job purposes",
     "description": "We are an electrical firm available 365 days a year, in Surrey, London, Hampshire & Scotland.",

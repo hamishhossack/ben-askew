@@ -64,7 +64,7 @@ type StaticParams = {
 }
 
 export const getStaticPaths = async (): Promise<Paths> => {
-  const files = fs.readdirSync(path.join('./_jobs'))
+  const files = fs.readdirSync(path.join('./_services'))
   const paths = files.map((fileName) => ({
     params: {
       slug: fileName.replace('.md', ''),
@@ -82,7 +82,7 @@ type StaticProps = {
 }
 
 export const getStaticProps = async ({ params: { slug } }: StaticParams): Promise<StaticProps> => {
-  const file = fs.readFileSync(path.join('_jobs', `${slug}.md`))
+  const file = fs.readFileSync(path.join('_services', `${slug}.md`))
   const { content, data } = matter(file)
   return {
     props: {

@@ -26,7 +26,7 @@ function Block({ index = 0, title, animation, color, description, icon }: Servic
   const padding = index % 2 === 0 ? `lg:pt-${index === 0 ? '12' : '6'}` : ''
   const colorClass = `bg-${color}-400`
   return (
-    <div key={title} data-aos={animation} className={`${padding} w-full md:w-4/12 px-4 text-center`}>
+    <div data-aos={animation} className={`${padding} w-full md:w-4/12 px-4 text-center`}>
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
         <div className="px-4 py-5 flex-auto">
           <div
@@ -43,14 +43,17 @@ function Block({ index = 0, title, animation, color, description, icon }: Servic
 }
 
 function ServiceBlocks({ services, icon, featured, content }: Props) {
+  console.log('services', services)
   return (
     <section className="pb-20 bg-gray-300 -mt-24">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap">
-          {services.map((service, i) => (
-            <Block index={i} {...service} />
-          ))}
-        </div>
+        {services && services.length > 0 && (
+          <div className="flex flex-wrap">
+            {services.map((service, i) => (
+              <Block key={service.title} index={i} {...service} />
+            ))}
+          </div>
+        )}
 
         <div className="flex flex-wrap items-center mt-32">
           <div data-aos="zoom-in" className="w-full md:w-5/12 px-4 mr-auto ml-auto">

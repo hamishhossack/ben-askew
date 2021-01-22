@@ -1,12 +1,11 @@
 ---
-title: My First Job
-description: A high level description of the project, for featured projects this
-  would be on the homepage!! Two sentences is probably all you'll need. Make
-  sure to catch key search terms for google.
+title: New job
+description: sadfgfhgjgfdsfghfgjfdsa
 draft: false
 featured: false
-image: media/photo-1530240852689-f7a9c6d9f6c7.jpeg
-imageAlt: Man climbing ladder
+imageRight: false
+image: media/builder.jpeg
+imageAlt: image
 ---
 ## What is Lorem Ipsum?
 

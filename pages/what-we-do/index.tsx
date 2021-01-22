@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import FeaturedBlock from '../../components/blocks/FeaturedBlock'
 import Hero from '../../components/blocks/Hero'
 import Layout from '../../components/utils/Layout'
-import data from '../../data/pages/portfolio.json'
+import data from '../../data/pages/what-we-do.json'
 
 type Job = {
   content: string
@@ -42,11 +42,11 @@ type StaticProps = {
 }
 
 export const getStaticProps = async (): Promise<StaticProps> => {
-  const files = fs.readdirSync(path.join('./_jobs'))
+  const files = fs.readdirSync(path.join('./_services'))
   const jobs = files.map((f) => {
-    const file = fs.readFileSync(path.join('./_jobs', f)).toString()
+    const file = fs.readFileSync(path.join('./_services', f)).toString()
     const { data, content } = matter(file)
-    return { data: { ...data, href: `/portfolio/${f.replace('.md', '')}` }, content }
+    return { data: { ...data, href: `/what-we-do/${f.replace('.md', '')}` }, content }
   }) as Job[]
 
   return {
