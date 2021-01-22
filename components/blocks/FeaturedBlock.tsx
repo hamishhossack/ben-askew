@@ -9,17 +9,17 @@ type Props = {
   content: string
   image: string
   imageAlt: string
-  key?: string
+  imageRight: boolean
 }
 
-function FeaturedBlock({ href, title, description, image, imageAlt }: Props) {
+function FeaturedBlock({ href, title, description, image, imageAlt, imageRight }: Props) {
   return (
     <section className="relative py-20">
       <SectionBreak />
 
       <div className="container mx-auto px-4">
         <div className="items-center flex flex-wrap">
-          {image && (
+          {image && !imageRight && (
             <div data-aos="fade-up-right" className="w-full md:w-4/12 ml-auto mr-auto px-4">
               <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
             </div>
@@ -36,6 +36,11 @@ function FeaturedBlock({ href, title, description, image, imageAlt }: Props) {
               </Link>
             </div>
           </div>
+          {image && imageRight && (
+            <div data-aos="fade-up-right" className="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
+            </div>
+          )}
         </div>
       </div>
     </section>
