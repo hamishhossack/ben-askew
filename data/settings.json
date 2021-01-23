@@ -1,13 +1,14 @@
 {
-  "base_url": "ben-askew.netlify.com",
-  "site_description": "A generic site description that will appear in search engine results.",
-  "instagram_account": "@benaskew",
-  "facebook_account": "benaskew",
-  "telephone": "",
-  "telephone_secondary": "",
-  "email": "info@bwaelectrical.com",
-  "site_keywords": "Electrician, Surrey, Leatherhead, London, Electrical",
+  "instagram_account": "@bwaelectricalltd",
   "site_title": "Ben Askew plumber",
+  "twitter_account": "@bwaelectricalltd",
+  "base_url": "ben-askew.netlify.com",
+  "site_keywords": "Electrician, Surrey, Leatherhead, London, Electrical",
+  "telephone": "07415472578",
+  "site_description": "A generic site description that will appear in search engine results.",
   "logo": "media/logo.svg",
-  "thumbnail": "media/logo.svg"
+  "thumbnail": "media/logo.svg",
+  "facebook_account": "@bwaelectricalltd",
+  "telephone_secondary": "07368132188",
+  "email": "info@bwaelectrical.com"
 }
