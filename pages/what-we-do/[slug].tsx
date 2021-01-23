@@ -6,13 +6,19 @@ import matter from 'gray-matter'
 import Hero from '../../components/blocks/Hero'
 import Layout from '../../components/utils/Layout'
 import ReactMarkdown from '../../components/utils/ReactMarkdown'
+import WorkSlider from '../../components/blocks/WorkSlider'
 
 type Props = {
   slug: string
   job: {
     content: string
     data: {
-      [key: string]: string
+      title: string
+      image: string
+      imageAlt: string
+      draft: boolean
+      featured: boolean
+      galleryImages: string[]
     }
   }
 }
@@ -41,6 +47,7 @@ const Job = ({ job }: Props) => {
             <div className="container mx-auto px-4">
               <div className="flex flex-wrap">
                 <ReactMarkdown>{job.content}</ReactMarkdown>
+                <WorkSlider gallery={job.data.galleryImages} />
               </div>
             </div>
           </section>

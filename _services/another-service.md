@@ -26,7 +26,6 @@ imageRight: true
 image: media/istockphoto-1075182646-1024x1024.jpg
 imageAlt: " "
 ---
-<!--StartFragment-->
 
 PAT Testing\
 Fault finding\
@@ -36,5 +35,3 @@ All types of Certifications\
 Interior and exterior lighting design and installation\
 Fuse board/ consumer unit replacements\
 Full & part rewires
-
-<!--EndFragment-->

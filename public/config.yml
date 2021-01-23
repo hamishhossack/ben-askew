@@ -148,6 +148,11 @@ collections:
       - { label: 'Main Image', name: 'image', widget: 'image' }
       - { label: 'Main Image Alt', name: 'imageAlt', widget: 'string', hint: 'Wanted for Accessibility' }
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+      - label: "Gallery"
+        name: "galleryImages"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: image}
 
   - name: "settings"
     label: "Settings"
