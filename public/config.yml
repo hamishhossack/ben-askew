@@ -85,6 +85,11 @@ collections:
                   - {label: "Description", name: "description", widget: "string"}
                   - {label: "Animation", name: "animation", widget: "select", default: "fade-up", options: ["fade-up", "fade-down", "fade-left", "fade-right", "fade-up-right", "fade-up-left", "zoom-in", "zoom-in-left", "zoom-in-right"]}
           - { label: 'Extra', name: "extra", widget: "markdown" }
+          - label: "Gallery"
+            name: "galleryImages"
+            widget: "list"
+            summary: '{{fields.image}}'
+            field: {label: Image, name: image, widget: image}
 
       - label: 'What we do' # Used in the UI
         name: 'what-we-do'
