@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import SectionBreak from '../elements/SectionBreak'
 import ReactMarkdown from '../utils/ReactMarkdown'
