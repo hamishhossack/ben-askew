@@ -6,7 +6,7 @@ type Props = {
   nextBg?: string
 }
 
-function Hero({ title, underlinedTitle, slogan, image, nextBg = 'text-gray-300' }: Props) {
+function Hero({ title, underlinedTitle, slogan, image, nextBg = 'gray-300' }: Props) {
   return (
     <div
       className="relative pt-16 pb-32 flex content-center items-center justify-center"
@@ -15,7 +15,7 @@ function Hero({ title, underlinedTitle, slogan, image, nextBg = 'text-gray-300' 
       }}
     >
       <div
-        className="absolute top-0 w-full h-full bg-center bg-cover"
+        className="absolute top-0 w-full h-full bg-center bg-cover overflow-hidden"
         style={{ backgroundImage: `url('${require(`../../data/${image}`)}')` }}
       >
         <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
@@ -37,7 +37,7 @@ function Hero({ title, underlinedTitle, slogan, image, nextBg = 'text-gray-300' 
         style={{ height: '70px', transform: 'translateZ(0)' }}
       >
         <svg
-          className="absolute bottom-0 overflow-hidden"
+          className="absolute bottom-0"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
           version="1.1"
@@ -45,7 +45,10 @@ function Hero({ title, underlinedTitle, slogan, image, nextBg = 'text-gray-300' 
           x="0"
           y="0"
         >
-          <polygon className={`fill-current ${nextBg ? nextBg : ''}`} points="2560 0 2560 100 0 100"></polygon>
+          <polygon
+            className={`fill-current ${nextBg ? `text-${nextBg}` : ''}`}
+            points="2560 0 2560 100 0 100"
+          ></polygon>
         </svg>
       </div>
     </div>

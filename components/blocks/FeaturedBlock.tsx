@@ -12,20 +12,32 @@ type Props = {
   imageAlt: string
   imageRight: boolean
   isMarkdown: boolean
+  isEven: boolean
 }
 
-function FeaturedBlock({ href, title, description, image, imageAlt, imageRight, isMarkdown = false }: Props) {
+function FeaturedBlock({
+  href,
+  title,
+  description,
+  image,
+  imageAlt,
+  imageRight,
+  isMarkdown = false,
+  isEven = false,
+}: Props) {
+  const color = isEven ? 'white' : 'gray-300'
+  const ImageContainer = (
+    <div data-aos="fade-up-right" className="w-full md:w-4/12 ml-auto mr-auto">
+      <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
+    </div>
+  )
   return (
-    <section className="relative py-20">
-      <SectionBreak />
+    <section className={`relative py-20 bg-${color}`}>
+      <SectionBreak color={color} />
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-12">
         <div className="items-center flex flex-wrap">
-          {image && !imageRight && (
-            <div data-aos="fade-up-right" className="w-full md:w-4/12 ml-auto mr-auto px-4">
-              <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
-            </div>
-          )}
+          {image && !imageRight && ImageContainer}
           <div data-aos="zoom-in" className="w-full md:w-5/12 ml-auto mr-auto px-4">
             <div className="md:pr-12">
               <h3 className="text-3xl font-semibold">{title}</h3>
@@ -39,11 +51,7 @@ function FeaturedBlock({ href, title, description, image, imageAlt, imageRight, 
               </Link>
             </div>
           </div>
-          {image && imageRight && (
-            <div data-aos="fade-up-right" className="w-full md:w-4/12 ml-auto mr-auto px-4">
-              <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
-            </div>
-          )}
+          {image && imageRight && ImageContainer}
         </div>
       </div>
     </section>

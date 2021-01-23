@@ -30,8 +30,8 @@ const PortfolioPage = ({ jobs }: Props) => (
       {/*  Page content */}
       <main className="flex-grow">
         <Hero title={data.title} underlinedTitle={data.underlinedTitle} image={data.image} nextBg="white" />
-        {jobs.map((job) => (
-          <FeaturedBlock key={job.data.title} isMarkdown={true} {...job.data} />
+        {jobs.map((job, i) => (
+          <FeaturedBlock key={job.data.title} isMarkdown={true} isEven={i % 2 === 0} {...job.data} />
         ))}
       </main>
     </div>
