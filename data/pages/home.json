@@ -7,7 +7,7 @@
     "services": [
       {
         "animation": "fade-up-left",
-        "color": "red",
+        "color": "blue",
         "icon": "angle-up",
         "title": "10+ Years Experience ",
         "description": "BWA Electrical is a family run business with a reputation for high quality work and customer service"
@@ -21,7 +21,7 @@
       },
       {
         "animation": "fade-up-right",
-        "color": "green",
+        "color": "blue",
         "icon": "angle-up",
         "description": "Going green is a priority for everyone, we guarantee to help you move forward at reasonable prices",
         "title": "Renewable Energy"
