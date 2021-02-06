@@ -39,7 +39,7 @@ const Job = ({ job }: Props) => {
   }
 
   return (
-    <Layout>
+    <Layout title={job.data.title}>
       <div className="flex flex-col min-h-screen overflow-hidden">
         {/*  Page content */}
         <main className="flex-grow">

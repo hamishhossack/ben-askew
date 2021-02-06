@@ -9,7 +9,7 @@ type Props = {
 function Hero({ title, underlinedTitle, slogan, image, nextBg = 'gray-300' }: Props) {
   return (
     <div
-      className="relative pt-16 pb-32 flex content-center items-center justify-center"
+      className="relative pt-32 lg:pt-16 pb-32 flex content-center items-center justify-center"
       style={{
         minHeight: '75vh',
       }}

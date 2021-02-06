@@ -1,11 +1,12 @@
 import BuildBlock from '../components/blocks/BuildBlock'
+import WorkSlider from '../components/blocks/WorkSlider'
 import SectionBreak from '../components/elements/SectionBreak'
 import Layout from '../components/utils/Layout'
 import ReactMarkdown from '../components/utils/ReactMarkdown'
 import data from '../data/pages/about.json'
 
 const AboutPage = () => (
-  <Layout>
+  <Layout title={data.title}>
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Page content */}
       <main className="flex-grow">
@@ -16,6 +17,7 @@ const AboutPage = () => (
             <div className="flex flex-wrap">
               <div className="w-full px-4">
                 <ReactMarkdown>{data.extra}</ReactMarkdown>
+                {data.galleryImages && <WorkSlider gallery={data.galleryImages} />}
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ function BuildBlock({ title, description, items, withBP = true, classNames = '' 
     <section className={`pb-20 relative block bg-gray-900 ${classNames}`}>
       <SectionBreak color="gray-900" />
 
-      <div className={`container mx-auto px-4 lg:pt-24 ${withBP ? 'lg:pb-64' : ''}`}>
+      <div className={`container mx-auto px-4 pt-12 lg:pt-24 ${withBP ? 'lg:pb-64' : ''}`}>
         <div data-aos="zoom-in" className="flex flex-wrap text-center justify-center">
           <div className="w-full lg:w-6/12 px-4">
             <h2 className="text-4xl font-semibold text-white">{title}</h2>

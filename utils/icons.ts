@@ -1,55 +1,20 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
-  faDribbble,
   faFacebook,
   faFacebookF,
   faFacebookSquare,
-  faGithub,
   faGoogle,
-  faHtml5,
   faInstagram,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
-import {
-  faArrowAltCircleDown,
-  faAward,
-  faBars,
-  faEnvelope,
-  faFingerprint,
-  faLightbulb,
-  faMedal,
-  faPaperPlane,
-  faPhone,
-  faPoll,
-  faRetweet,
-  faRocket,
-  faUserCircle,
-  faUserFriends,
-} from '@fortawesome/free-solid-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
-library.add(
-  faBars,
-  faPhone,
-  faArrowAltCircleDown,
-  faAward,
-  faRetweet,
-  faFingerprint,
-  faUserFriends,
-  faRocket,
-  faHtml5,
-  faPaperPlane,
-  faTwitter,
+library.add({
+  ...fas,
   faFacebook,
   faFacebookF,
   faFacebookSquare,
-  faDribbble,
-  faGithub,
   faGoogle,
   faInstagram,
-  faMedal,
-  faPoll,
-  faLightbulb,
-  faUserCircle,
-  faPhone,
-  faEnvelope
-)
+  faTwitter,
+})

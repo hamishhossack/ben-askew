@@ -25,7 +25,7 @@ type Props = {
 }
 
 const PortfolioPage = ({ jobs }: Props) => (
-  <Layout>
+  <Layout title={data.title}>
     <div className="flex flex-col min-h-screen overflow-hidden">
       {/*  Page content */}
       <main className="flex-grow">
