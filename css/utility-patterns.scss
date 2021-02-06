@@ -15,20 +15,22 @@
   @apply text-2xl font-bold leading-snug tracking-tight;
 }
 
-.highlight {
-  position: relative;
-  z-index: 1;
+@media (min-width: 640px) {
+  .highlight {
+    position: relative;
+    z-index: 1;
 
-  &:before {
-    content: "";
-    position: absolute;
-    height: 0.3em;
-    bottom: 0;
-    left: 4%;
-    width: 98%;
-    background: #5081C2;
-    border-radius: 1px;
-    z-index: -1;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 0.3em;
+      bottom: 0;
+      left: 4%;
+      width: 98%;
+      background: #5081C2;
+      border-radius: 1px;
+      z-index: -1;
+    }
   }
 }
 
