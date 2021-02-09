@@ -21,8 +21,8 @@
       },
       {
         "animation": "fade-up-right",
-        "color": "blue",
-        "icon": "angle-up",
+        "color": "DarkSeaGreen",
+        "icon": "charging-station",
         "description": "Going green is a priority for everyone, we guarantee to help you move forward at reasonable prices",
         "title": "Renewable Energy"
       }
