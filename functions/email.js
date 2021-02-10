@@ -5,7 +5,7 @@ const mg = mailgun({ apiKey, domain })
 const data = {
   from: 'Mailgun Sandbox <postmaster@sandbox05050bd5b01d4cf2b5920b735a2b624b.mailgun.org>',
   to: 'info@bwaelectrical.com',
-  subject: 'Hello',
+  subject: 'Website contact',
   text: 'Testing some Mailgun awesomness!',
 }
 
@@ -15,13 +15,16 @@ exports.handler = async (event, context) => {
     return { statusCode: 405, body: 'Method Not Allowed' }
   }
 
-  console.log(event)
-
-  await mg.messages().send(data, function (error, body) {
-    console.log(error, body)
-  })
-
-  return {
-    statusCode: 201,
+  try {
+    await mg.messages().send({ ...data, text: event.body })
+  } catch (e) {
+    console.error(e)
+    return {
+      statusCode: 403,
+    }
+  } finally {
+    return {
+      statusCode: 201,
+    }
   }
 }
