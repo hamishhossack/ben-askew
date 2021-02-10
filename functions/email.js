@@ -1,6 +1,7 @@
 const mailgun = require('mailgun-js')
-const DOMAIN = 'sandbox05050bd5b01d4cf2b5920b735a2b624b.mailgun.org'
-const mg = mailgun({ apiKey: '***REMOVED***', domain: DOMAIN })
+const domain = 'sandbox05050bd5b01d4cf2b5920b735a2b624b.mailgun.org'
+const apiKey = process.env.MAILGUN_API_KEY || ''
+const mg = mailgun({ apiKey, domain })
 const data = {
   from: 'Mailgun Sandbox <postmaster@sandbox05050bd5b01d4cf2b5920b735a2b624b.mailgun.org>',
   to: 'info@bwaelectrical.com',
