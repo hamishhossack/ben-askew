@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="bg-primaryBlack">
+      <Html lang="en" className="bg-primaryBlack">
         <Head>
           <meta name="description" content={metadata.site_description} />
           <meta name="keywords" content={metadata.site_keywords} />

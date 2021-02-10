@@ -39,7 +39,7 @@ function FeaturedBlock({
           >
             <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
           </div>
-          <div data-aos="zoom-in" className="w-full md:w-5/12 ml-auto mr-auto px-4">
+          <div data-aos="zoom-in" className="w-full md:w-5/12 ml-auto mr-auto px-4 py-12 md:py-0">
             <div className="md:pr-12">
               <h3 className="text-3xl font-semibold">{title}</h3>
               {isMarkdown ? (

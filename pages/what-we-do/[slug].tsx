@@ -10,6 +10,7 @@ import WorkSlider from '../../components/blocks/WorkSlider'
 
 type Job = {
   title: string
+  description: string
   image: string
   imageAlt: string
   draft: boolean
@@ -40,6 +41,11 @@ const Job = ({ job }: Props) => {
 
   return (
     <Layout title={job.data.title}>
+      <Head>
+        <meta property="og:title" content={job.data.title} />
+        <meta property="og:description" content={job.data.description} />
+        <meta property="og:image" content={job.data.image} />
+      </Head>
       <div className="flex flex-col min-h-screen overflow-hidden">
         {/*  Page content */}
         <main className="flex-grow">

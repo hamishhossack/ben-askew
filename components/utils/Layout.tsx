@@ -19,7 +19,10 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       </title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="icon" type="image/png" href="/logo.png" />
+      <meta property="og:title" content={`${settings.site_title} | ${title}`} />
+      <meta property="og:description" content={settings.site_description} />
+      <meta property="og:image" content="/logo-with-bg.png" />
     </Head>
 
     <header className="w-full">

@@ -34,7 +34,7 @@ function BuildBlock({ title, description, items, withBP = true, classNames = '' 
               <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                 <FontAwesomeIcon icon={['fas', icon as IconName]} className="text-xl" />
               </div>
-              <h6 className="text-xl mt-5 font-semibold text-white">{title}</h6>
+              <h5 className="text-xl mt-5 font-semibold text-white">{title}</h5>
               <p className="mt-2 mb-4 text-gray-500">{description}</p>
             </div>
           ))}
