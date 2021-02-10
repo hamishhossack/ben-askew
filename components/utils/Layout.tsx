@@ -22,7 +22,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <link rel="icon" type="image/png" href="/logo.webp" />
       <meta property="og:title" content={`${settings.site_title} | ${title}`} />
       <meta property="og:description" content={settings.site_description} />
-      <meta property="og:image" content="/logo-with-bg.png" />
+      <meta property="og:image" content="https://bwaelectrical.com/logo-with-bg.png" />
     </Head>
 
     <header className="w-full">
