@@ -25,18 +25,20 @@ function FeaturedBlock({
   isEven = false,
 }: Props) {
   const color = isEven ? 'white' : 'gray-300'
-  const ImageContainer = (
-    <div data-aos="fade-up-right" className="w-full md:w-4/12 ml-auto mr-auto">
-      <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
-    </div>
-  )
   return (
     <section className={`relative py-20 bg-${color}`}>
       <SectionBreak color={color} />
 
       <div className="container mx-auto px-4 py-12">
         <div className="items-center flex flex-wrap">
-          {image && !imageRight && ImageContainer}
+          <div
+            data-aos="fade-up-right"
+            className={`w-full md:w-5/12 ml-auto place-self-center mr-auto order-first ${
+              imageRight ? 'md:order-last' : ''
+            }`}
+          >
+            <img alt={imageAlt} className="max-w-full rounded-lg shadow-lg" src={require(`../../data/${image}`)} />
+          </div>
           <div data-aos="zoom-in" className="w-full md:w-5/12 ml-auto mr-auto px-4">
             <div className="md:pr-12">
               <h3 className="text-3xl font-semibold">{title}</h3>
@@ -50,7 +52,6 @@ function FeaturedBlock({
               </Link>
             </div>
           </div>
-          {image && imageRight && ImageContainer}
         </div>
       </div>
     </section>
