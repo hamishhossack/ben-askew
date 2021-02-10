@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { createRef, useState } from 'react'
+import ReCAPTCHA, { ReCAPTCHAProps } from 'react-google-recaptcha'
 
 function ContactBlock() {
   const [sending, setSending] = useState(false)
@@ -7,28 +8,30 @@ function ContactBlock() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [body, setBody] = useState('')
+  const recaptchaRef = createRef<any>()
 
   async function submit() {
     setSending(true)
 
     // Default options are marked with *
     try {
-      const response = await fetch(`/.netlify/functions/email`, {
+      const token = await recaptchaRef.current.executeAsync()
+      const response = await fetch('/.netlify/functions/email', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         credentials: 'same-origin', // include, *same-origin, omit
         headers: {
-          'Content-Type': 'application/text',
+          'Content-Type': 'application/json',
         },
         redirect: 'follow', // manual, *follow, error
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        body: `
-          Name: ${name}
-          email: ${email}
-
-          ${body}
-        `,
+        body: JSON.stringify({
+          name,
+          email,
+          body,
+          token,
+        }),
       })
 
       if (!response.ok) {
@@ -49,7 +52,7 @@ function ContactBlock() {
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-              <div className="flex-auto p-5 lg:p-10">
+              <form className="flex-auto p-5 lg:p-10" onSubmit={submit}>
                 <h4 className="text-2xl font-semibold">Contact us</h4>
                 <p className="leading-relaxed mt-1 mb-4 text-gray-700">
                   Complete this form and we will get back to you in 24 hours
@@ -99,6 +102,7 @@ function ContactBlock() {
                   />
                 </div>
                 <div className="text-center mt-6">
+                  <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey="6LcB01IaAAAAAFUvCmdxi3Zdhb6GRLI6qbpYoMq2" />
                   {sent && !error && <p className="text-green-600 text-bold py-6">Your message has been sent</p>}
                   {sent && error && (
                     <p className="text-red-600 text-bold py-6">
@@ -108,8 +112,7 @@ function ContactBlock() {
                   {!sent && (
                     <button
                       className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                      onClick={submit}
+                      type="submit"
                       disabled={sending}
                       style={{ transition: 'all .15s ease' }}
                     >
@@ -117,7 +120,7 @@ function ContactBlock() {
                     </button>
                   )}
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

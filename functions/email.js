@@ -1,12 +1,12 @@
 const mailgun = require('mailgun-js')
 const domain = 'sandbox05050bd5b01d4cf2b5920b735a2b624b.mailgun.org'
 const apiKey = process.env.MAILGUN_API_KEY || ''
+const secret = process.env.RECAPTCHA_KEY || ''
 const mg = mailgun({ apiKey, domain })
-const data = {
+const mgDefaults = {
   from: 'Mailgun Sandbox <postmaster@sandbox05050bd5b01d4cf2b5920b735a2b624b.mailgun.org>',
   to: 'info@bwaelectrical.com',
   subject: 'Website contact',
-  text: 'Testing some Mailgun awesomness!',
 }
 
 exports.handler = async (event, context) => {
@@ -16,7 +16,17 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    await mg.messages().send({ ...data, text: event.body })
+    const data = JSON.parse(event.body)
+    const text = `
+      Name: ${data.name}
+      Email: ${data.email}
+
+      ${data.message}
+    `
+    console.log('DATA', data)
+    console.log('text', text)
+    await axios.post('https://www.google.com/recaptcha/api/siteverify', { secret, response: data.token })
+    await mg.messages().send({ ...mgDefaults, text })
   } catch (e) {
     console.error(e)
     return {
