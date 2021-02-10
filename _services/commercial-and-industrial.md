@@ -8,7 +8,7 @@ description: We have great experience working with estate agents, landlords and
 draft: false
 featured: false
 imageRight: false
-image: media/istockphoto-488120139-1024x1024.jpg
+image: media/residential-new-builds.jpg
 imageAlt: Image
 ---
 

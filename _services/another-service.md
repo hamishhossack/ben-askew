@@ -23,7 +23,7 @@ description: >-
 draft: false
 featured: false
 imageRight: true
-image: media/istockphoto-1075182646-1024x1024.jpg
+image: media/installing-light.jpg
 imageAlt: " "
 ---
 
