@@ -3,7 +3,6 @@
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "thumbnail": "media/hero-image.jpg",
   "serviceBlock": {
-    "icon": "user-friends",
     "services": [
       {
         "animation": "fade-up-left",
@@ -26,13 +25,35 @@
         "description": "Going green is a priority for everyone, we guarantee to help you move forward at reasonable prices",
         "title": "Renewable Energy"
       }
-    ],
+    ]
+  },
+  "main": {
+    "icon": "user-friends",
     "featured": {
       "title": "24 Hour Emergency call out 07415472578 or 07368132188",
       "description": "Loss of power? Emergency works required? Electrical testing? PAT testing? Call us - Same day response",
-      "image": "media/capture-2.png"
+      "image": "media/capture-2.png",
+      "imageAlt": "24 hour electrician callout"
     },
-    "content": "### What people say about BWA Electrical\n\n\n\n\"Excellent electrician, Good price and outstanding work. I was really impressed with Ben's knowledge and customer service. Cleaned up as he went along and did an amazing job of fitting a brand new fuse board along with garden lighting design and install\" G J Gardener\n\n\"Great service from BWA Electrical, very prompt was here within the hour off calling for emergency electrical works. Highly recommend them and their first class service\" M Wilcox\n\n\"BWA Electrical completed a full re-wire and re-fitting on our second floor electrical circuit. This included new fittings, holes, lights etc for 3 rooms. Their work was second to none. Faultless experience, helpful advice when choosing product and they were very tidy, efficient and polite. Highly recommended for any domestic or commercial needs.\" Alex J Jones\n\n\"Outstanding work from the guys at BWA they where polite and courteous. They gave us a quote before work started which me and my wife were happy with. Their work was of a very high standard and we were both very satisfied with it. They left out house tidy and clean after work was completed and where very conscientious about Covid-19 safety. We will be booking BWA again for more electrical works soon.\" L Woodall"
+    "quotes": [
+      {
+        "name": "G J Gardener",
+        "quote": "Excellent electrician, Good price and outstanding work. I was really impressed with Ben's knowledge and customer service. Cleaned up as he went along and did an amazing job of fitting a brand new fuse board along with garden lighting design and install"
+      },
+      {
+        "name": "M Wilcox",
+        "quote": "Great service from BWA Electrical, very prompt was here within the hour off calling for emergency electrical works. Highly recommend them and their first class service"
+      },
+      {
+        "name": "Alex J Jones",
+        "quote": "BWA Electrical completed a full re-wire and re-fitting on our second floor electrical circuit. This included new fittings, holes, lights etc for 3 rooms. Their work was second to none. Faultless experience, helpful advice when choosing product and they were very tidy, efficient and polite. Highly recommended for any domestic or commercial needs."
+      },
+      {
+        "name": "L Woodall",
+        "quote": "Outstanding work from the guys at BWA they where polite and courteous. They gave us a quote before work started which me and my wife were happy with. Their work was of a very high standard and we were both very satisfied with it. They left out house tidy and clean after work was completed and where very conscientious about Covid-19 safety. We will be booking BWA again for more electrical works soon."
+      }
+    ],
+    "extra":"### What people say about BWA Electrical"
   },
   "slogan": "Covering Surrey, South East, London, Sussex and more...",
   "image": "media/cinema.jpg",

@@ -33,6 +33,7 @@ export default function Footer() {
               </h5>
               <div className="mt-6">
                 <button
+                  aria-label="Facebook profile"
                   className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                   type="button"
                   onClick={() => (window.location.href = `https://facebook.com/${metadata.facebook_account}`)}
@@ -44,7 +45,7 @@ export default function Footer() {
             <div className="w-full lg:w-6/12">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4 mt-12 md:mt-0 ml-auto">
-                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span>
+                  <span className="block uppercase text-gray-700 text-sm font-semibold mb-2">Useful Links</span>
                   <ul className="list-unstyled">
                     {PATHS.map(({ title, path, icon }) => (
                       <li key={path}>
@@ -58,7 +59,7 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">Contact</span>
+                  <span className="block uppercase text-gray-700 text-sm font-semibold mb-2">Contact</span>
                   <ul className="list-unstyled">
                     <li>
                       <a
@@ -87,7 +88,7 @@ export default function Footer() {
               <img src={require('../../data/media/niceic.png')} alt="niceic logo" className="h-24 max-w-full" />
             </div>
             <div className="w-full md:w-4/12 px-4 text-right">
-              <div className="text-sm text-gray-600 font-semibold py-1">
+              <div className="text-sm text-gray-700 font-semibold py-1">
                 Copyright &copy; {new Date().getFullYear()} BWA electrical
               </div>
             </div>

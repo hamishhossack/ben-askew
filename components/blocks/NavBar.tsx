@@ -33,6 +33,7 @@ function Navbar({ router, transparent }: Props) {
               </a>
             </Link>
             <button
+              aria-label="Mobile menu"
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
@@ -55,7 +56,7 @@ function Navbar({ router, transparent }: Props) {
                       className={`px-3 py-4 lg:py-2 flex items-center text-xs uppercase ${
                         transparent
                           ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
-                          : 'text-gray-800 hover:text-gray-600'
+                          : 'text-gray-800 hover:text-gray-700'
                       } ${router.pathname === path ? 'font-bold' : ''}`}
                     >
                       {icon && (
@@ -76,7 +77,7 @@ function Navbar({ router, transparent }: Props) {
                   className={
                     (transparent
                       ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
-                      : 'text-gray-800 hover:text-gray-600') +
+                      : 'text-gray-800 hover:text-gray-700') +
                     ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                   }
                   href={`https://facebook.com/${metadata.facebook_account}`}

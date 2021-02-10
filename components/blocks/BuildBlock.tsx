@@ -17,6 +17,7 @@ type Props = {
 }
 
 function BuildBlock({ title, description, items, withBP = true, classNames = '' }: Props) {
+  const columns = Math.round(items.length / 12)
   return (
     <section className={`pb-20 relative block bg-gray-900 ${classNames}`}>
       <SectionBreak color="gray-900" />
@@ -30,11 +31,11 @@ function BuildBlock({ title, description, items, withBP = true, classNames = '' 
         </div>
         <div className="flex flex-wrap mt-12 justify-center">
           {items.map(({ icon, title, description }) => (
-            <div key={title} data-aos="fade-up" className="w-full lg:w-3/12 px-4 text-center">
+            <div key={title} data-aos="fade-up" className={`w-full lg:w-${columns}/12 px-4 text-center`}>
               <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                 <FontAwesomeIcon icon={['fas', icon as IconName]} className="text-xl" />
               </div>
-              <h5 className="text-xl mt-5 font-semibold text-white">{title}</h5>
+              <h3 className="text-xl mt-5 font-semibold text-white">{title}</h3>
               <p className="mt-2 mb-4 text-gray-500">{description}</p>
             </div>
           ))}

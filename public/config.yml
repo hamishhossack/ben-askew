@@ -37,6 +37,10 @@ collections:
                   - {label: "Title", name: "title", widget: "string"}
                   - {label: "Description", name: "description", widget: "string"}
                   - {label: "Animation", name: "animation", widget: "select", default: "fade-up", options: ["fade-up", "fade-down", "fade-left", "fade-right", "fade-up-right", "fade-up-left", "zoom-in", "zoom-in-left", "zoom-in-right"]}
+          - label: 'Main'
+            name: 'main'
+            widget: 'object'
+            fields:
               - label: 'Featured'
                 name: 'featured'
                 widget: 'object'
@@ -44,9 +48,14 @@ collections:
                   - {label: 'Title', name: 'title', widget: 'string'}
                   - {label: 'Description', name: 'description', widget: 'string'}
                   - {label: 'Image', name: 'image', widget: 'image'}
-              - label: 'Content'
-                name: 'content'
-                widget: 'markdown'
+              - label: "Quotes"
+                name: "quotes"
+                minimize_collapsed: true
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "string"}
+                  - {label: "Quote", name: "quote", widget: "string"}
+              - { label: 'Extra', name: "extra", widget: "markdown" }
 
           - label: 'Build Block'
             name: 'buildBlock'

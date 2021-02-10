@@ -45,7 +45,7 @@ function FeaturedBlock({
               {isMarkdown ? (
                 <ReactMarkdown>{description}</ReactMarkdown>
               ) : (
-                <p className="mt-4 text-lg leading-relaxed text-gray-600">{description}</p>
+                <p className="mt-4 text-lg leading-relaxed text-gray-700">{description}</p>
               )}
               <Link href={href}>
                 <a className="font-bold text-gray-800 mt-8">See the project in detail</a>

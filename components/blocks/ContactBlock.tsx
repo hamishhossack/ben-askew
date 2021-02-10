@@ -7,7 +7,7 @@ function ContactBlock() {
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
               <div className="flex-auto p-5 lg:p-10">
                 <h4 className="text-2xl font-semibold">Contact us</h4>
-                <p className="leading-relaxed mt-1 mb-4 text-gray-600">
+                <p className="leading-relaxed mt-1 mb-4 text-gray-700">
                   Complete this form and we will get back to you in 24 hours
                 </p>
                 <div className="relative w-full mb-3 mt-8">
@@ -16,6 +16,7 @@ function ContactBlock() {
                   </label>
                   <input
                     type="text"
+                    id="full-name"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Full Name"
                     style={{ transition: 'all .15s ease' }}
@@ -28,6 +29,7 @@ function ContactBlock() {
                   </label>
                   <input
                     type="email"
+                    id="email"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Email"
                     style={{ transition: 'all .15s ease' }}
@@ -41,6 +43,7 @@ function ContactBlock() {
                   <textarea
                     rows={4}
                     cols={80}
+                    id="message"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Type a message..."
                   />
