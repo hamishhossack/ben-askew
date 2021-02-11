@@ -8,7 +8,7 @@ description: BWA Electrical work closely with reputable developers to deliver
 draft: false
 featured: false
 imageRight: false
-image: media/installing-light.jpg
+image: media/house-at-night.jpg
 imageAlt: image
 galleryImages:
   - media/adam-winger-a4u4deun-hw-unsplash.jpg
