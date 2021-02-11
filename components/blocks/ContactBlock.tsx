@@ -1,4 +1,4 @@
-import { createRef, useState } from 'react'
+import { createRef, FormEventHandler, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 function ContactBlock() {
@@ -10,7 +10,8 @@ function ContactBlock() {
   const [body, setBody] = useState('')
   const recaptchaRef = createRef<any>()
 
-  async function submit() {
+  const submit: FormEventHandler = async (e) => {
+    e.preventDefault()
     setSending(true)
 
     try {

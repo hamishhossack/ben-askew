@@ -1,4 +1,5 @@
 const mailgun = require('mailgun-js')
+const axios = require('axios')
 const domain = 'sandbox05050bd5b01d4cf2b5920b735a2b624b.mailgun.org'
 const apiKey = process.env.MAILGUN_API_KEY || ''
 const secret = process.env.RECAPTCHA_KEY || ''
@@ -21,10 +22,8 @@ exports.handler = async (event, context) => {
       Name: ${data.name}
       Email: ${data.email}
 
-      ${data.message}
+      ${data.body}
     `
-    console.log('DATA', data)
-    console.log('text', text)
     await axios.post('https://www.google.com/recaptcha/api/siteverify', { secret, response: data.token })
     await mg.messages().send({ ...mgDefaults, text })
   } catch (e) {
