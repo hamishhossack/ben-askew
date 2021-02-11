@@ -1,6 +1,12 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import metadata from '../data/settings.json'
 
+declare global {
+  interface Window {
+    dataLayer: any
+  }
+}
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -24,6 +30,11 @@ class MyDocument extends Document {
           <meta name="copyright" content="hamish.hossack" />
 
           {/* Google Analytics goes here */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5D475V3PR"></script>
+          <script>
+            window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'G-B5D475V3PR');
+          </script>
         </Head>
         <body>
           <Main />
