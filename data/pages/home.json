@@ -30,7 +30,7 @@
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "main": {
     "title": "What can we do for you today",
-    "body": "Loss of power? Emergency works required? We'll have the kettle back on in no time!\n\nElectrical testing needed? Require some advice? one of our friendly and professional team members will be happy to help\n\nCall us - Same day response\n\nDon't take our word for it, here are what our customers think about our service and what we did for them...",
+    "body": "Call us today to organise a time for an on-site visit for us to advise and quote for any electrical based works you require\n\nElectrical testing needed or require some advice? one of our friendly and professional team members will be happy to help\n\nDon't take our word for it, here are what our customers think about our service and what we did for them...",
     "quotes": [
       {
         "name": "G J Gardener - Guildford",
@@ -51,7 +51,7 @@
     ],
     "featured": {
       "title": "24 Hour Emergency call out 07415472578 or 07368132188",
-      "description": "Call us today and get a time and quote for any electrical based enquiry",
+      "description": "Loss of power? Emergency works required? We'll have the kettle back on in no time!",
       "image": "media/capture-2.png",
       "imageAlt": "24 hour electrician callout"
     }
