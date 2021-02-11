@@ -70,7 +70,7 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href={`email:${metadata.email}`}
+                        href={`mailto:${metadata.email}`}
                       >
                         {metadata.email}
                       </a>
