@@ -30,7 +30,7 @@
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "main": {
     "title": "What can we do for you today",
-    "body": "\n\n\\    Loss of power? We'll have the kettle back on in no time!\n\n* Emergency works required?\n* Electrical testing?\n* PAT testing?\n\n  Or just require some advice? one of our friendly and professional team members will be happy to help\n\nCall us - Same day response\n\nDon't take our word for it, here are what are customers think about our service and what we did for them...",
+    "body": "\n\n* Loss of power? We'll have the kettle back on in no time!\n\n  Emergency works required?\n\n  Electrical testing?\n\n  PAT testing?\n\n  Or just require some advice? one of our friendly and professional team members will be happy to help\n\n\n\nCall us - Same day response\n\nDon't take our word for it, here are what are customers think about our service and what we did for them...",
     "quotes": [
       {
         "name": "G J Gardener - Guildford",
