@@ -29,13 +29,8 @@
   },
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "main": {
-    "icon": "user-friends",
-    "featured": {
-      "title": "24 Hour Emergency call out 07415472578 or 07368132188",
-      "description": "Call us today and get a time and quote for any electrical based enquiry",
-      "image": "media/capture-2.png",
-      "imageAlt": "24 hour electrician callout"
-    },
+    "title": "What can we do for you today",
+    "body": "",
     "quotes": [
       {
         "name": "G J Gardener",
@@ -54,7 +49,12 @@
         "quote": "Outstanding work from the guys at BWA they where polite and courteous. They gave us a quote before work started which me and my wife were happy with. Their work was of a very high standard and we were both very satisfied with it. They left out house tidy and clean after work was completed and where very conscientious about Covid-19 safety. We will be booking BWA again for more electrical works soon."
       }
     ],
-    "extra": "### What can we do for you today...\n\n* Loss of power?\n\n  Emergency works required?\n\n  Electrical testing?\n\n  PAT testing?"
+    "featured": {
+      "title": "24 Hour Emergency call out 07415472578 or 07368132188",
+      "description": "Call us today and get a time and quote for any electrical based enquiry",
+      "image": "media/capture-2.png",
+      "imageAlt": "24 hour electrician callout"
+    }
   },
   "image": "media/cinema.jpg",
   "slogan": "Covering Surrey, South East, London, Sussex and more...",

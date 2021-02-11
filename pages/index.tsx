@@ -1,6 +1,3 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
 import BuildBlock from '../components/blocks/BuildBlock'
 import ContactBlock from '../components/blocks/ContactBlock'
 import Hero from '../components/blocks/Hero'
@@ -9,14 +6,6 @@ import Layout from '../components/utils/Layout'
 import data from '../data/pages/home.json'
 import QuoteSlider from '../components/blocks/QuoteSlider'
 import ReactMarkdown from 'react-markdown'
-
-type Props = {
-  featured?: {
-    content: string
-    href: string
-    data: { [key: string]: string }
-  }[]
-}
 
 const IndexPage = () => {
   return (
@@ -28,9 +17,14 @@ const IndexPage = () => {
 
           <div className="flex flex-wrap items-center bg-gray-300">
             <div data-aos="zoom-in" className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-              {data.main.extra && (
+              {data.main.title && (
                 <div className="w-full px-4 mr-auto ml-auto">
-                  <ReactMarkdown>{data.main.extra}</ReactMarkdown>
+                  <h3 className="text-3xl font-semibold">{data.main.title}</h3>
+                </div>
+              )}
+              {data.main.body && (
+                <div className="w-full px-4 mr-auto ml-auto">
+                  <ReactMarkdown>{data.main.body}</ReactMarkdown>
                 </div>
               )}
               <QuoteSlider quotes={data.main.quotes} />
@@ -71,27 +65,6 @@ const IndexPage = () => {
       </div>
     </Layout>
   )
-}
-
-type StaticProps = {
-  props: Props
-}
-
-export const getStaticProps = async (): Promise<StaticProps> => {
-  const files = fs.readdirSync(path.join('./_services'))
-  const featured = files
-    .map((f) => {
-      const file = fs.readFileSync(path.join('./_services', f)).toString()
-      const { data, content } = matter(file)
-      return { data, content, href: `/what-we-do/${f.replace('.md', '')}` }
-    })
-    .filter((j) => j.data.featured)
-
-  return {
-    props: {
-      featured,
-    },
-  }
 }
 
 export default IndexPage
