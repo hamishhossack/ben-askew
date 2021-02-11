@@ -1,5 +1,5 @@
 import { createRef, useState } from 'react'
-import ReCAPTCHA, { ReCAPTCHAProps } from 'react-google-recaptcha'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 function ContactBlock() {
   const [sending, setSending] = useState(false)
@@ -13,19 +13,14 @@ function ContactBlock() {
   async function submit() {
     setSending(true)
 
-    // Default options are marked with *
     try {
       const token = await recaptchaRef.current.executeAsync()
       const response = await fetch('/.netlify/functions/email', {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
+        method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
         },
-        redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify({
           name,
           email,
