@@ -3,7 +3,7 @@ title: New properties
 description: BWA Electrical work closely with reputable developers to deliver
   exceptional electrical installations. We work with the developer to fulfil
   their specifications using the latest technology where appropriate. We have
-  experiance working in very high end projects, paying close attention to detail
+  experience working in very high end projects, paying close attention to detail
   and the individual requirements of the client.
 draft: false
 featured: false
