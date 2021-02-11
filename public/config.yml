@@ -191,3 +191,6 @@ collections:
           - { label: "Twitter account", name: "twitter_account", widget: "string", default: '' }
           - { label: "Instagram account", name: "instagram_account", widget: "string", default: '' }
           - { label: "Facebook account", name: "facebook_account", widget: "string", default: '' }
+          - { label: "Company registration Number", name: "company_reg", widget: "string", default: '' }
+          - { label: "Footer title", name: "footer_title", widget: "string", default: '' }
+          - { label: "Footer description", name: "footer_description", widget: "string", default: '' }
