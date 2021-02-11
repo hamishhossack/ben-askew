@@ -24,13 +24,6 @@
         "icon": "charging-station",
         "description": "Going green is a priority for everyone, we guarantee to help you move forward at reasonable prices",
         "title": "Renewable Energy"
-      },
-      {
-        "animation": "fade-up",
-        "color": "purple",
-        "icon": "phone",
-        "title": "Contact Us Today",
-        "description": "07415 472578 / 07368132188 info@bwaelectrical.com"
       }
     ]
   },
