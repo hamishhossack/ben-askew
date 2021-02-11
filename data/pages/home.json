@@ -1,7 +1,7 @@
 {
-  "title": "Local Electrician 24 Hour call out NICEIC",
-  "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
+  "underlinedTitle": "Approved Contractor",
   "thumbnail": "media/hero-image.jpg",
+  "title": "Local Electrician 24 Hour call out NICEIC",
   "serviceBlock": {
     "services": [
       {
@@ -27,6 +27,7 @@
       }
     ]
   },
+  "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "main": {
     "icon": "user-friends",
     "featured": {
@@ -53,11 +54,10 @@
         "quote": "Outstanding work from the guys at BWA they where polite and courteous. They gave us a quote before work started which me and my wife were happy with. Their work was of a very high standard and we were both very satisfied with it. They left out house tidy and clean after work was completed and where very conscientious about Covid-19 safety. We will be booking BWA again for more electrical works soon."
       }
     ],
-    "extra":"### What people say about BWA Electrical"
+    "extra": "### Details on work you've done?\n\n\n\nblah blah blah blah"
   },
-  "slogan": "Covering Surrey, South East, London, Sussex and more...",
   "image": "media/cinema.jpg",
-  "underlinedTitle": "Approved Contractor",
+  "slogan": "Covering Surrey, South East, London, Sussex and more...",
   "buildBlock": {
     "title": "Staying COVID-19 Secure",
     "description": "We confirm we have complied with the governments guidance on managing the risk of COVID-19",
