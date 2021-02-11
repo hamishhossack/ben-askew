@@ -17,7 +17,7 @@ type Props = {
 }
 
 function BuildBlock({ title, description, items, withBP = true, classNames = '' }: Props) {
-  const columns = Math.round(items.length / 12)
+  const columns = items.length > 0 ? Math.round(12 / items.length) : 12
   return (
     <section className={`pb-20 relative block bg-gray-900 ${classNames}`}>
       <SectionBreak color="gray-900" />
