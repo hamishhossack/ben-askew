@@ -24,13 +24,20 @@
         "icon": "charging-station",
         "description": "Going green is a priority for everyone, we guarantee to help you move forward at reasonable prices",
         "title": "Renewable Energy"
+      },
+      {
+        "animation": "fade-up",
+        "color": "purple",
+        "icon": "phone",
+        "title": "Contact Us Today",
+        "description": "07415 472578 / 07368132188 info@bwaelectrical.com"
       }
     ]
   },
   "content": "Welcome to a markdown rendered page from NetlifyCMS!\n\nWe can do formatting like **Bold** and *Italics*, we can make lists:\n\n* With bullet points\n\n1. Or numbers\n\nand much more. \n\nJust note, because tailwind.css overwrites all the default element styles, you'll need to add css to render these properly, check the css/tailwind.css file for more.\n\n The data files are stored as JSON so that we get type inference for free with typescript.",
   "main": {
     "title": "What can we do for you today",
-    "body": "Loss of power? We'll have the kettle back on in no time!\n\nEmergency works required?\n\nElectrical testing?\n\nPAT testing?\n\nOr just require some advice? one of our friendly and professional team members will be happy to help\n\nCall us - Same day response\n\nDon't take our word for it, here are what our customers think about our service and what we did for them...",
+    "body": "Loss of power? Emergency works required? We'll have the kettle back on in no time!\n\nElectrical testing needed? Require some advice? one of our friendly and professional team members will be happy to help\n\nCall us - Same day response\n\nDon't take our word for it, here are what our customers think about our service and what we did for them...",
     "quotes": [
       {
         "name": "G J Gardener - Guildford",
