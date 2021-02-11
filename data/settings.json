@@ -1,17 +1,17 @@
 {
   "instagram_account": "bwaelectricalltd",
-  "site_title": "Ben Askew Electrician",
+  "site_title": "BWA Electrical ltd",
   "twitter_account": "bwaelectricalltd",
   "base_url": "ben-askew.netlify.com",
-  "site_keywords": "Electrician, Surrey, Leatherhead, London, Electrical",
+  "site_keywords": "Local Electrician, near me and you based in Surrey and surrounding areas",
   "telephone": "07415472578",
-  "site_description": "A generic site description that will appear in search engine results.",
+  "site_description": "Local NICEIC Approved contractor",
   "logo": "media/logo.svg",
   "thumbnail": "media/logo.svg",
+  "company_reg": "BWAELECTRICAL LIMITED - Company number: 13191864",
   "facebook_account": "bwaelectricalltd",
-  "telephone_secondary": "07368132188",
-  "email": "info@bwaelectrical.com",
   "footer_title": "Same day response",
   "footer_description": "Find us on any of these platforms, we respond 1-2 business days.",
-  "company_reg": "BWAELECTRICAL LIMITED - Company number: 13191864"
+  "telephone_secondary": "07368132188",
+  "email": "info@bwaelectrical.com"
 }
