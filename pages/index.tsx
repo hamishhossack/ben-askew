@@ -15,7 +15,7 @@ const IndexPage = () => {
           <Hero title={data.title} underlinedTitle={data.underlinedTitle} slogan={data.slogan} image={data.image} />
           <ServiceBlocks services={data.serviceBlock.services} />
 
-          <div className="flex flex-wrap items-center bg-gray-300">
+          <div className="flex flex-wrap bg-gray-300">
             <div data-aos="zoom-in" className="w-full md:w-5/12 px-4 mr-auto ml-auto">
               {data.main.title && (
                 <div className="w-full px-4 mr-auto ml-auto">

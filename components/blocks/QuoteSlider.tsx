@@ -8,7 +8,7 @@ type Props = {
 function QuoteSlider({ quotes }: Props) {
   return (
     <CarouselProvider
-      className="w-full py-24"
+      className="w-full py-12"
       visibleSlides={1}
       totalSlides={quotes.length}
       step={1}
