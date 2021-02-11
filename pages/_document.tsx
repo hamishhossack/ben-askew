@@ -31,10 +31,16 @@ class MyDocument extends Document {
 
           {/* Google Analytics goes here */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5D475V3PR"></script>
-          <script>
-            window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments)}
-            gtag('js', new Date()); gtag('config', 'G-B5D475V3PR');
-          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-B5D475V3PR');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />

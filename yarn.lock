@@ -1782,6 +1782,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@corex/deepmerge@^2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.5.3.tgz#ecdb8e4c0617ada2a5af0c0400f56562d1f0ea31"
+  integrity sha512-9q+jWQ6zqBc7iU2ItxYcoA+G/QUxPt0eo7d3PVNy30HOCpIEX/oZPmtoC3+XSJNyHdV39MGrq+EIpVh81jcapw==
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -5622,6 +5627,11 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
+escape-string-regexp@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
+  integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
+
 escodegen@1.x.x:
   version "1.14.3"
   resolved "https://registry.yarnpkg.com/escodegen/-/escodegen-1.14.3.tgz#4e7b81fba61581dc97582ed78cab7f0e8d63f503"
@@ -8352,6 +8362,13 @@ markdown-table@^1.1.0:
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.3.tgz#9fcb69bcfdb8717bfd0398c6ec2d93036ef8de60"
   integrity sha512-1RUZVgQlpJSPWYbFSpmudq5nHY1doEIv89gBtF0s4gW1GF2XorxcA/70M5vq7rLv0a6mhOUccRsqkwhwLCIQ2Q==
 
+matcher@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/matcher/-/matcher-3.0.0.tgz#bd9060f4c5b70aa8041ccc6f80368760994f30ca"
+  integrity sha512-OkeDaAZ/bQCxeFAozM55PKcKU0yJMPGifLwV4Qgjitu+5MoAfSQN4lsLJeXZ1b8w0x+/Emda6MZgXS1jvsapng==
+  dependencies:
+    escape-string-regexp "^4.0.0"
+
 material-colors@^1.2.1:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
@@ -9226,6 +9243,15 @@ next-optimized-images@^2.6.2:
     img-loader "^3.0.1"
     raw-loader "^2.0.0"
     url-loader "^1.1.2"
+
+next-sitemap@^1.4.19:
+  version "1.4.19"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.4.19.tgz#91d810f7cd74a66d4f6911727633a5ebf997d09d"
+  integrity sha512-kSZ2pvItDwuysl890NjRmT2k0Wl7fWTdfDPnerNNwhBMtwY9mx+Ldw1gDAZiAphijopK+qPUOYYdSTMLbM0nVg==
+  dependencies:
+    "@corex/deepmerge" "^2.5.3"
+    matcher "^3.0.0"
+    minimist "^1.2.5"
 
 next-tick@~1.0.0:
   version "1.0.0"
