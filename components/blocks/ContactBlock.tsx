@@ -5,7 +5,12 @@ function ContactBlock() {
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-              <form className="flex-auto p-5 lg:p-10" data-netlify="true">
+              <form
+                className="flex-auto p-5 lg:p-10"
+                method="post"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+              >
                 <h4 className="text-2xl font-semibold">Contact us</h4>
                 <p className="leading-relaxed mt-1 mb-4 text-gray-700">
                   Complete this form and we will get back to you in 24 hours
