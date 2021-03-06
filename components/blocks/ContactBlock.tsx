@@ -10,37 +10,37 @@ function ContactBlock() {
   const [body, setBody] = useState('')
   const recaptchaRef = createRef<any>()
 
-  const submit: FormEventHandler = async (e) => {
-    e.preventDefault()
-    setSending(true)
+  // const submit: FormEventHandler = async (e) => {
+  //   e.preventDefault()
+  //   setSending(true)
 
-    try {
-      const token = await recaptchaRef.current.executeAsync()
-      const response = await fetch('/.netlify/functions/email', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          body,
-          token,
-        }),
-      })
+  //   try {
+  //     const token = await recaptchaRef.current.executeAsync()
+  //     const response = await fetch('/.netlify/functions/email', {
+  //       method: 'POST',
+  //       mode: 'cors',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({
+  //         name,
+  //         email,
+  //         body,
+  //         token,
+  //       }),
+  //     })
 
-      if (!response.ok) {
-        setError(true)
-      }
-    } catch (e) {
-      console.error(e)
-      setError(true)
-    } finally {
-      setSending(false)
-      setSent(true)
-    }
-  }
+  //     if (!response.ok) {
+  //       setError(true)
+  //     }
+  //   } catch (e) {
+  //     console.error(e)
+  //     setError(true)
+  //   } finally {
+  //     setSending(false)
+  //     setSent(true)
+  //   }
+  // }
 
   return (
     <section className="relative block py-40 lg:pt-0 bg-gray-900">
@@ -48,7 +48,8 @@ function ContactBlock() {
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-              <form className="flex-auto p-5 lg:p-10" onSubmit={submit}>
+              {/* @ts-ignore */}
+              <form className="flex-auto p-5 lg:p-10" netlify>
                 <h4 className="text-2xl font-semibold">Contact us</h4>
                 <p className="leading-relaxed mt-1 mb-4 text-gray-700">
                   Complete this form and we will get back to you in 24 hours
