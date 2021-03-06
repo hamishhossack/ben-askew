@@ -1,4 +1,4 @@
-import { createRef, useState } from 'react'
+import { createRef } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 function ContactBlock() {
