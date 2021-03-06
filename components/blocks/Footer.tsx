@@ -99,7 +99,7 @@ export default function Footer() {
                     className="max-w-full"
                   />
                 </a>
-                <a className="px-4" href={`https://g.page/${metadata.google_account}`}>
+                <a className="px-4" href={`https://g.page/${metadata.google_account}?share`}>
                   <img
                     src={require('../../data/media/google-reviews.png')}
                     alt="Google reviews logo"

@@ -94,7 +94,7 @@ function Navbar({ router, transparent }: Props) {
                       : 'text-gray-800 hover:text-gray-700') +
                     ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
                   }
-                  href={`https://g.page/${metadata.google_account}`}
+                  href={`https://g.page/${metadata.google_account}?share`}
                 >
                   <FontAwesomeIcon icon={['fab', 'google']} className="text-gray-500 text-lg leading-lg" />
                   <span className="lg:hidden inline-block ml-2">Google</span>
