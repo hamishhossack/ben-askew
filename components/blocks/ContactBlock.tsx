@@ -1,5 +1,4 @@
 import { createRef } from 'react'
-import ReCAPTCHA from 'react-google-recaptcha'
 
 function ContactBlock() {
   // const [sending, setSending] = useState(false)
@@ -48,8 +47,7 @@ function ContactBlock() {
         <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
-              {/* @ts-ignore */}
-              <form className="flex-auto p-5 lg:p-10" netlify>
+              <form className="flex-auto p-5 lg:p-10" data-netlify="true">
                 <h4 className="text-2xl font-semibold">Contact us</h4>
                 <p className="leading-relaxed mt-1 mb-4 text-gray-700">
                   Complete this form and we will get back to you in 24 hours
@@ -99,7 +97,7 @@ function ContactBlock() {
                   />
                 </div>
                 <div className="text-center mt-6">
-                  <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey="6LcB01IaAAAAAFUvCmdxi3Zdhb6GRLI6qbpYoMq2" />
+                  {/* <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey="6LcB01IaAAAAAFUvCmdxi3Zdhb6GRLI6qbpYoMq2" /> */}
                   {/* {sent && !error && <p className="text-green-600 text-bold py-6">Your message has been sent</p>}
                   {sent && error && (
                     <p className="text-red-600 text-bold py-6">
