@@ -17,12 +17,13 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    console.log('event.body', event.body)
     const data = JSON.parse(event.body)
     const text = `
-      Name: ${data.name}
-      Email: ${data.email}
+      Name: ${data.payload.name}
+      Email: ${data.payload.email}
 
-      ${data.body}
+      ${data.payload.body}
     `
     await mg.messages.create(domain, {
       from: 'Web Admin <postmaster@bwaelectrical.com>',
