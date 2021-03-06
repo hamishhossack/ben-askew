@@ -18,12 +18,13 @@ function ContactBlock() {
                   Complete this form and we will get back to you in 24 hours
                 </p>
                 <div className="relative w-full mb-3 mt-8">
-                  <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="full-name">
+                  <label className="block uppercase text-gray-700 text-xs font-bold mb-2" htmlFor="name">
                     Full Name
                   </label>
                   <input
                     type="text"
-                    id="full-name"
+                    id="name"
+                    name="name"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Full Name"
                     style={{ transition: 'all .15s ease' }}
@@ -37,6 +38,7 @@ function ContactBlock() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Email"
                     style={{ transition: 'all .15s ease' }}
@@ -51,6 +53,7 @@ function ContactBlock() {
                     rows={4}
                     cols={80}
                     id="message"
+                    name="message"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Type a message..."
                   />
