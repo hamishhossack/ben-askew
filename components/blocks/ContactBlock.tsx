@@ -7,7 +7,7 @@ function ContactBlock() {
   // const [name, setName] = useState('')
   // const [email, setEmail] = useState('')
   // const [body, setBody] = useState('')
-  const recaptchaRef = createRef<any>()
+  // const recaptchaRef = createRef<any>()
 
   // const submit: FormEventHandler = async (e) => {
   //   e.preventDefault()
