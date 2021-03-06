@@ -7,7 +7,7 @@ function ContactBlock() {
             <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
               <form
                 className="flex-auto p-5 lg:p-10"
-                method="post"
+                method="POST"
                 name="contact"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
