@@ -12,6 +12,7 @@ function ContactBlock() {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
+                <input type="hidden" name="form-name" value="contact" />
                 <h4 className="text-2xl font-semibold">Contact us</h4>
                 <p className="leading-relaxed mt-1 mb-4 text-gray-700">
                   Complete this form and we will get back to you in 24 hours
