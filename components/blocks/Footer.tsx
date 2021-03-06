@@ -87,11 +87,45 @@ export default function Footer() {
           </div>
           <hr className="my-6 border-gray-400" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 px-4">
-              <img src={require('../../data/media/niceic.png')} alt="niceic logo" className="h-24 max-w-full" />
+            <div className="md:w-8/12 px-4 flex flex-wrap flex-column">
+              <div className="w-full flex flex-row justify-between pb-8">
+                <a className="px-4" href="https://niceic.com">
+                  <img src={require('../../data/media/niceic.png')} alt="niceic logo" className="max-w-full" />
+                </a>
+                <a className="px-4" href="https://cityandguilds.com">
+                  <img
+                    src={require('../../data/media/city-and-guilds-logo.png')}
+                    alt="City and Guilds logo"
+                    className="max-w-full"
+                  />
+                </a>
+                <a className="px-4" href={`https://g.page/${metadata.google_account}`}>
+                  <img
+                    src={require('../../data/media/google-reviews.png')}
+                    alt="Google reviews logo"
+                    className="max-w-full"
+                  />
+                </a>
+              </div>
+              <div className="w-full flex flex-row justify-between">
+                <a className="px-4" href="https://mybuilder.com">
+                  <img
+                    src={require('../../data/media/mybuilder-logo.png')}
+                    alt="My Builder logo"
+                    className="max-w-full"
+                  />
+                </a>
+                <a className="px-4" href="https://mytrustedexpert.com">
+                  <img
+                    src={require('../../data/media/my-trusted-expert-logo.png')}
+                    alt="My Trusted Expert logo"
+                    className="max-w-full"
+                  />
+                </a>
+              </div>
             </div>
-            <div className="w-full md:w-4/12 px-4 text-right">
-              <div className="text-sm text-gray-700 font-semibold py-1">
+            <div className="w-full md:w-4/12 px-4 py-4 text-right">
+              <div className="text-sm text-center md:text-right text-gray-700 font-semibold py-1">
                 Copyright &copy; {new Date().getFullYear()} BWA electrical
               </div>
             </div>

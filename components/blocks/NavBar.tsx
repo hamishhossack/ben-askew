@@ -86,6 +86,20 @@ function Navbar({ router, transparent }: Props) {
                   <span className="lg:hidden inline-block ml-2">Facebook</span>
                 </a>
               </li>
+              <li className="flex items-center">
+                <a
+                  className={
+                    (transparent
+                      ? 'lg:text-white lg:hover:text-gray-300 text-gray-800'
+                      : 'text-gray-800 hover:text-gray-700') +
+                    ' px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
+                  }
+                  href={`https://g.page/${metadata.google_account}`}
+                >
+                  <FontAwesomeIcon icon={['fab', 'google']} className="text-gray-500 text-lg leading-lg" />
+                  <span className="lg:hidden inline-block ml-2">Google</span>
+                </a>
+              </li>
 
               {/* <li className="flex items-center">
                 <button
