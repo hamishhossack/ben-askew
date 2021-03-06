@@ -1,46 +1,4 @@
-import { createRef } from 'react'
-
 function ContactBlock() {
-  // const [sending, setSending] = useState(false)
-  // const [sent, setSent] = useState(false)
-  // const [error, setError] = useState(false)
-  // const [name, setName] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [body, setBody] = useState('')
-  // const recaptchaRef = createRef<any>()
-
-  // const submit: FormEventHandler = async (e) => {
-  //   e.preventDefault()
-  //   setSending(true)
-
-  //   try {
-  //     const token = await recaptchaRef.current.executeAsync()
-  //     const response = await fetch('/.netlify/functions/email', {
-  //       method: 'POST',
-  //       mode: 'cors',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({
-  //         name,
-  //         email,
-  //         body,
-  //         token,
-  //       }),
-  //     })
-
-  //     if (!response.ok) {
-  //       setError(true)
-  //     }
-  //   } catch (e) {
-  //     console.error(e)
-  //     setError(true)
-  //   } finally {
-  //     setSending(false)
-  //     setSent(true)
-  //   }
-  // }
-
   return (
     <section className="relative block py-40 lg:pt-0 bg-gray-900">
       <div className="container mx-auto px-4">
@@ -62,8 +20,6 @@ function ContactBlock() {
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Full Name"
                     style={{ transition: 'all .15s ease' }}
-                    // value={name}
-                    // onChange={(e) => setName(e.target.value)}
                   />
                 </div>
 
@@ -77,8 +33,6 @@ function ContactBlock() {
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Email"
                     style={{ transition: 'all .15s ease' }}
-                    // value={email}
-                    // onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
@@ -92,18 +46,9 @@ function ContactBlock() {
                     id="message"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Type a message..."
-                    // value={body}
-                    // onChange={(e) => setBody(e.target.value)}
                   />
                 </div>
                 <div className="text-center mt-6">
-                  {/* <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey="6LcB01IaAAAAAFUvCmdxi3Zdhb6GRLI6qbpYoMq2" /> */}
-                  {/* {sent && !error && <p className="text-green-600 text-bold py-6">Your message has been sent</p>}
-                  {sent && error && (
-                    <p className="text-red-600 text-bold py-6">
-                      Your message has failed to send, please contact us on Facebook
-                    </p>
-                  )} */}
                   <button
                     className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                     type="submit"
