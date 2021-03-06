@@ -1,13 +1,13 @@
-import { createRef, FormEventHandler, useState } from 'react'
+import { createRef, useState } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 function ContactBlock() {
-  const [sending, setSending] = useState(false)
-  const [sent, setSent] = useState(false)
-  const [error, setError] = useState(false)
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [body, setBody] = useState('')
+  // const [sending, setSending] = useState(false)
+  // const [sent, setSent] = useState(false)
+  // const [error, setError] = useState(false)
+  // const [name, setName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [body, setBody] = useState('')
   const recaptchaRef = createRef<any>()
 
   // const submit: FormEventHandler = async (e) => {
@@ -64,8 +64,8 @@ function ContactBlock() {
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Full Name"
                     style={{ transition: 'all .15s ease' }}
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    // value={name}
+                    // onChange={(e) => setName(e.target.value)}
                   />
                 </div>
 
@@ -79,8 +79,8 @@ function ContactBlock() {
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Email"
                     style={{ transition: 'all .15s ease' }}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    // value={email}
+                    // onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
@@ -94,28 +94,25 @@ function ContactBlock() {
                     id="message"
                     className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                     placeholder="Type a message..."
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
+                    // value={body}
+                    // onChange={(e) => setBody(e.target.value)}
                   />
                 </div>
                 <div className="text-center mt-6">
                   <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey="6LcB01IaAAAAAFUvCmdxi3Zdhb6GRLI6qbpYoMq2" />
-                  {sent && !error && <p className="text-green-600 text-bold py-6">Your message has been sent</p>}
+                  {/* {sent && !error && <p className="text-green-600 text-bold py-6">Your message has been sent</p>}
                   {sent && error && (
                     <p className="text-red-600 text-bold py-6">
                       Your message has failed to send, please contact us on Facebook
                     </p>
-                  )}
-                  {!sent && (
-                    <button
-                      className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                      type="submit"
-                      disabled={sending}
-                      style={{ transition: 'all .15s ease' }}
-                    >
-                      Send Message
-                    </button>
-                  )}
+                  )} */}
+                  <button
+                    className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                    type="submit"
+                    style={{ transition: 'all .15s ease' }}
+                  >
+                    Send Message
+                  </button>
                 </div>
               </form>
             </div>
