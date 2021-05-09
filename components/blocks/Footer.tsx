@@ -108,13 +108,6 @@ export default function Footer() {
                 </a>
               </div>
               <div className="w-full flex flex-row justify-between">
-                <a className="px-4" href="https://mybuilder.com">
-                  <img
-                    src={require('../../data/media/mybuilder-logo.png')}
-                    alt="My Builder logo"
-                    className="max-w-full"
-                  />
-                </a>
                 <a className="px-4" href="https://mytrustedexpert.com">
                   <img
                     src={require('../../data/media/my-trusted-expert-logo.png')}
